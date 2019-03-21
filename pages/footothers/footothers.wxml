@@ -1,0 +1,33 @@
+<!--pages/footothers/footothers.wxml-->
+<view class='footmybox'>
+  <view class='mytopbox'>
+    <image class='myphoto' src = "{{myheader}}"></image>
+    <text class='myusername'>{{myname}}</text>
+    <image src = "../../images/icomale.png" wx:if = "{{sex==1}}" class='sexico'></image>
+    <image src = "../../images/icofemale.png" wx:else class='sexico'></image> 
+    <text class='myfootnum'>作品-{{footnum}}</text>
+  </view>
+  <view class='nonebox' wx:if = "{{mydefault}}">
+    <text class='deftext'>你还没有生成足迹，快去制作一个吧！</text>
+  </view>
+  <view class='myfootlist' wx:else>
+    <view class='startpoint'></view>
+    <view class='myfobox' wx:for = "{{myfootarr}}" id = "{{item.id}}" catchtap='myfootjump'>
+      <view class='activepoint'></view>
+      <view class='mycoverbox'>
+        <image class='mycoverimg' mode = "aspectFill" src = "{{item.s_img}}"></image>
+        <text class='myfotit'>{{item.title}}</text>
+        <text class='myfodate'>{{item.create_time}}</text>
+        <text class='myviewnum'>{{item.play_count}}次浏览</text>
+        <button class='myfoshare' open-type = "share" catchtap='jumpfalse'>
+          <image class='myfoshareimg' src = "../../images/foothotshare.png"></image>
+        </button>
+      </view>
+      <view class='mylocalbox'>
+        <text class='myloctit'>足迹位置</text>
+        <text class='mylocaltext'>{{item.pos}}</text>
+      </view>
+    </view>
+  </view>
+  
+</view>

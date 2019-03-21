@@ -1,0 +1,40 @@
+<!--pages/newstation/newstation.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='staionstit'>
+  <image src = "../../images/orpoint.png"></image>
+  <text>第{{stacap}}站</text>
+</view>
+<form bindsubmit = "formsubmit">
+<view class='positionbar'>
+  <input type='text' name = "position" placeholder='点击输入位置' bindinput='bindKeyInput' value = "{{position}}" bindblur = "placeblur" value='{{position}}'></input>
+  <cover-view class='linkbox' wx:if = "{{linkshow}}">
+    <cover-view class='text' wx:for = "{{sugData}}" wx:for-item = "textitem" data-place = "{{textitem.name}}" bindtap='chooseplace' data-sid = "{{staidx}}">{{textitem.name}}</cover-view>
+  </cover-view>
+</view>
+<view class='mediabox'>
+  <view class='singpic' wx:for = "{{imgarr}}" wx:for-index = "imgidx">
+    <image class='mediapic' mode = "aspectFill"  src = "{{item}}"></image>
+    <image class='delico' bindtap='delspotimg' data-nid = "{{imgidx}}"  src = "../../images/delico.png"></image>
+  </view>
+  <view class='vedbox' wx:if = "{{vedsrc}}">
+    <video src = "{{vedsrc}}"></video>
+    <view class='deleteved' bindtap='deleteved'>
+      <image src = "../../images/deleteved.png"></image>
+      <text>删除此视频</text>
+    </view>
+  </view>
+  <image bindtap='addmedia' wx:if = "{{imgarr.length<6&&vedsrc==''}}" class='squareadd' src='../../images/addsquare.png'></image>
+</view>
+<view class='contarea'>
+  <textarea name = "des" value='{{text}}' placeholder='说说什么吧…' maxlength='-1'>
+  </textarea>
+</view>
+<button class='orgbtn' form-type = "submit">
+  <image src='../../images/orgbtn.png'></image>
+  <text>完成</text>
+</button>
+</form>
+<view class='suggest' bindtap='suggesttap'>遇到问题？</view>
+<view class='mask' wx:if = "{{linkshow}}" bindtap='linkother'></view>

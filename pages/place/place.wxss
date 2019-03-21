@@ -1,0 +1,159 @@
+/* pages/routebook/routebook.wxss */
+.searchbar{
+  width: 702rpx;
+  height: 64rpx;
+  margin: 0 auto;
+  background: #f0efeb;
+  border-radius: 10rpx;
+  position: relative;
+  
+}
+.searchbar image.ico{
+  position: absolute;
+  top: 14rpx;
+  left: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+.searchbar button{
+  width: 150rpx;
+  height: 64rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  border-radius: 0;
+
+}
+.searchbar button::after{
+  opacity: 0;
+}
+.searchbar button image{
+  width: 150rpx;
+  height: 64rpx;
+}
+.searchbar input{
+  width: 470rpx;
+  height: 64rpx;
+  position: absolute;
+  top: 0;
+  left: 75rpx;
+  font-size: 28rpx;
+
+}
+.searchbar button text{
+  font-size: 30rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 64rpx;
+  width: 150rpx;
+  text-align: center;
+  color: #fff;
+}
+.contbox{
+  padding-top: 10rpx;
+}
+.contbox .sing{
+  width: 100%;
+  height: 225rpx;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  margin-top: 24rpx;
+}
+.contbox .sing image{
+  float: left;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.contbox .textbox{
+  float: right;
+  width: 480rpx;
+  height: 224rpx;
+  border-bottom: 1rpx solid #e8e7e0;
+}
+.contbox .textbox .tit{
+  font-size: 28rpx;
+  color: #1f1607;
+  line-height: 1.5;
+}
+.contbox .price{
+  color: #ff7f01;
+  font-size: 42rpx;
+  margin-top: 10rpx;
+  font-weight: bold;
+}
+.contbox .price text{
+  display: inline;
+  line-height: 43rpx;
+}
+.contbox .price text.ico{
+  font-size: 22rpx;
+}
+.contbox .price text.integ{
+  font-size: 24rpx;
+  color: #c3bcb6;
+  font-weight: normal;
+  margin-left: 15rpx;
+}
+.contbox .tagbox{
+  margin-top: 10rpx;
+}
+.contbox .tagbox text{
+  font-size: 20rpx;
+  color: #a3a298;
+  line-height: 28rpx;
+  height: 30rpx;
+  padding: 0 16rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #a3a298;
+  float: left;
+
+}
+.contbox.none{
+  padding-top: 200rpx;
+}
+.contbox.none image{
+  width: 373rpx;
+  height: 221rpx;
+  margin: 0 auto;
+  display: block;
+}
+.contbox.none text{
+  font-size: 32rpx;
+  color: #b8b8b8;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.placebar{
+  width: 100%;
+  height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  padding-top: 10rpx;
+}
+.placebar text{
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #645e59;
+  line-height: 80rpx;
+  position: relative;
+}
+.placebar text.active::after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 36rpx;
+  height: 2rpx;
+  background: #ff7f01;
+  bottom: 15rpx;
+  left: 50%;
+  margin-left: -18rpx;
+}
+.placebar text.active{
+  color: #ff7f01;
+}

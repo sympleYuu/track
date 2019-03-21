@@ -1,0 +1,176 @@
+/* pages/intform/intform.wxss */
+.priamy{
+  width: 100%;
+  height: auto;
+}
+.priamy text{
+  font-size: 30rpx;
+  line-height: 1.5;
+  padding: 24rpx;
+}
+.graybar{
+  width: 100%;
+  height: 16rpx;
+  background: #f7f7f7;
+}
+.arrrig{
+  float: right;
+  width: 17rpx;
+  height: 24rpx;
+  margin-top: 33rpx;
+  margin-right: 25rpx;
+}
+.formbox .sing{
+  width: 100%;
+  min-height: 88rpx;
+  border-bottom: 1rpx solid #f7f7f7;
+}
+.formbox .sing .place{
+  float: right;
+  margin-right: 25rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #000;
+  width: 400rpx;
+  text-align: right;
+}
+.formbox .sing .tit{
+  float: left;
+  line-height: 88rpx;
+  color: #000;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+.formbox .sing .tit.imp::after{
+  content: "*";
+  color: #ff1f1f;
+  font-size: 30rpx;
+
+}
+.timebox{
+  width: 100%;
+  clear: left;
+  text-align: center;
+  padding-bottom: 25rpx;
+}
+.timebox text{
+  display: inline;
+  font-size: 30rpx;
+  color: #838383;
+  line-height: 30rpx;
+}
+.timebox text.line{
+  margin: 0 25rpx;
+}
+.timebox .choose01{
+  color: #ff8308;
+}
+.formbox .sing input{
+  float: right;
+  text-align: right;
+  line-height: 32rpx;
+  font-size: 30rpx;
+  margin-right: 25rpx;
+  margin-top: 16rpx;
+}
+.numbox image{
+  width: 38rpx;
+  height: 38rpx;
+  float: left;
+  margin-top: 26rpx;
+}
+.numbox{
+  float: right;
+}
+.subbtn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 88rpx;
+  background: #ff8002;
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  padding: 0;
+}
+.subbtn::after{
+  opacity: 0;
+}
+.numbox text{
+  float: left;
+  color: #000;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  width: 75rpx;
+  text-align: center;
+
+}
+.numbox{
+  margin-right: 35rpx;
+}
+.timepicker01{
+ display: inline-block;
+}
+.uptop{
+  width: 500rpx;
+  height: 300rpx;
+  position: fixed;
+  top: 300rpx;
+  left: 50%;
+  margin-left: -250rpx;
+  background: #fff;
+  z-index: 1000;
+  border-radius: 10rpx;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+  z-index: 999;
+}
+.uptop .title{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #888;
+  display: inline-block;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+.tips image{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.tips{
+  padding-top: 60rpx;
+  text-align: center;
+}
+.uptop .sure{
+  text-align: center;
+  color: #ff8002;
+  font-size: 28rpx;
+  padding-top: 40rpx;
+}
+.formbox .note{
+  width: 100%;
+  height: 312rpx;
+  border-bottom: 1rpx solid #f7f7f7;
+  margin-bottom: 100rpx;
+}
+.formbox .note text{
+  font-size: 28rpx;
+  color: #000;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+}
+.formbox .note textarea{
+  width: 100%;
+  height: 220rpx;
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 30rpx;
+}

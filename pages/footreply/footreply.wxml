@@ -1,0 +1,54 @@
+<!--pages/footreply/footreply.wxml-->
+<view class='main{{int}}' style="min-height:{{winheight}}px">
+  <view wx:if = "{{nonecomm}}" class='nonecomm'>暂无评论，来抢沙发</view>
+  <view wx:else>
+  <view class='replybox{{int}}' wx:for = "{{replyarr}}" data-rid='{{item.id}}' catchtap='replyothers' data-name = "{{item.username}}" data-uid='{{item.user_id}}' data-total = "{{item.total}}">
+    <view class='personbox{{int}}'>
+      <image class='perphoto' src = "{{item.header}}"></image>
+      <view class='pertextbox{{int}}'>
+        <text class='pername{{int}}'>{{item.username}}</text>
+        <view class='perlevelbox{{int}}'>
+          <text class='perlevel{{int}}'>Lv{{item.graded_tmp}}</text>
+        </view>
+        <text class='perdate{{int}}'>{{item.create_time}}</text>
+      </view>
+    </view>
+    <view class='rebox{{int}}'>
+      <text class='refirtext{{int}}'>{{item.content}}</text>
+    </view>
+    <view class='secrebox{{int}}' wx:if = "{{item.reply_id || item.replay_id}}">
+      <text class='cite{{int}}'>引用@{{item.username2}}</text>
+      <text class='citetext{{int}}'>{{item.replycontent}}</text>
+    </view>
+    <view class='secrebox{{int}}' wx:if = "{{item.media_url}}">
+      <text class='cite{{int}}'>引用@足迹中的<text wx:if = "{{item.is_video==2}}" class='citetext01'>图片</text><text class='citetext01' wx:else>视频</text></text>
+      <image class='citeimg' mode="aspectFill" src = "{{item.media_url}}"></image>
+    </view>
+  </view>
+</view>
+</view>
+
+<view wx:if = "{{replymask}}" class='replymask{{int}}'></view>
+<view class='replybott{{int}}'>
+  <form>
+    <input class='inpfoot{{int}}' name = "replyarea" placeholder='{{holder}}' adjust-position = "true" bindconfirm = "replyform" bindblur = "inputdown" bindfocus = "inputup" focus='{{inputfocus}}' confirm-type = "done" value = "{{inputvalue}}" ></input>
+  </form>
+  
+</view>
+<view class='replyinpbox{{int}}' wx:if = "{{replybox}}">
+  <form bindsubmit="replyform">
+    <textarea name = "replyarea" class='replyarea{{int}}' placeholder-class="holder{{int}}" placeholder='点击输入评论内容...' auto-focus='{{autofocus}}'></textarea>
+    <button class='replybtn{{int}}' formType="submit">完成</button>
+  </form>
+  
+  <view class='closemask' bindtap='closemask'></view>
+</view>
+
+<view class='replyinpbox{{int}}' wx:if = "{{replybox_re}}">
+  <form bindsubmit="replyform_re">
+    <textarea name = "replyarea" class='replyarea{{int}}' placeholder-class="holder{{int}}" placeholder='点击输入评论内容...' auto-focus='{{autofocus}}'></textarea>
+    <button class='replybtn{{int}}' formType="submit">完成</button>
+  </form>
+  
+  <view class='closemask' bindtap='closemask'></view>
+</view>

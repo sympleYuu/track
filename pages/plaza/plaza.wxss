@@ -1,0 +1,56 @@
+/* pages/plaza/plaza.wxss */
+.tabbar{
+  width: 100%;
+  height: 62rpx;
+  border-bottom: 1rpx solid #e8e7e0;
+}
+.tabbar .cont text{
+  float: left;
+  width: 110rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #645e59;
+  margin-right: 40rpx;
+  line-height: 60rpx;
+}
+.tabbar .cont text.active{
+  position: relative;
+  color: #ff7f01;
+}
+.tabbar .cont text.active::after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 36rpx;
+  height: 2rpx;
+  background: #ff7f01;
+  left: 50%;
+  margin-left: -18rpx;
+}
+.plazabox .sing{
+  margin-top: 24rpx;
+  padding: 0 24rpx;
+}
+.plazabox .person{
+  
+}
+.plazabox .person image{
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 50%;
+  background: #edaf39;
+  float: left;
+}
+.plazabox .person text{
+  font-size: 28rpx;
+  color: #645e59;
+  float: left;
+  margin-left: 18rpx;
+}
+.plazabox text.tit{
+  font-size: 28rpx;
+  color: #1f1607;
+  clear: both;
+  line-height: 1.5;
+  padding-top: 24rpx;
+}

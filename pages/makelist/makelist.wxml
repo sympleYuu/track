@@ -1,0 +1,45 @@
+<!--pages/makelist/makelist.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='topbox'>
+  <input type = "text" value="{{footarr[0].track.title}}" bindblur = "nameblur"></input>
+  <text></text>
+  <image mode = "aspectFill" src = "{{footarr[0].track.banner}}"></image>
+  <image bindtap='changecover' class='changecover' src = "../../images/changepic.png"></image>
+
+</view>
+<view class='conbox'>
+  <view wx:for = "{{footarr}}" wx:for-index = "idx" >
+    <view class='singbox' wx:if = "{{item.id}}" catchtap='jumpexit' id = "{{item.id}}" data-idx = "{{idx}}">
+        <view class='top'>
+          <text class='sta'>第{{capnum[idx]}}站</text>
+          <text class='location'>{{item.location}}</text>
+          <image class='deleico' catchtap='deletesta' data-pid = "{{item.id}}" src= "../../images/dele001.png"></image>
+        </view>
+        <view class='picarr' wx:if = "{{item.images}}">
+          <image mode = "aspectFill" wx:for = "{{item.images}}" wx:for-item = "itempic" src = "https://track.huiur.com{{itempic}}"></image>
+        </view>
+        <view wx:else class='vedbox'>
+          <image class='cover' mode = "aspectFill" src = "https://track.huiur.com/{{item.video.img}}"></image>
+          <image class='playbtn' src = "../../images/playbtn01.png"></image>
+        </view>
+        <view class='text' wx:if = "{{item.text}}">{{item.text}}</view>
+      </view>
+  </view>
+  
+  <view class='addstabtn' bindtap='addpoints'>添加站点
+  </view>
+  <view class='orgbtn' bindtap='jumppreview'>
+    <image src='../../images/orgbtn.png'></image>
+    <text>预览</text>
+  </view>
+  <view class='percentbar'>
+    <text class='tit'>推荐度：{{percent}}</text>
+    <view class='barbox'>
+      <view class='orgbar' style="width:{{barWidth}}rpx"></view>
+    </view>
+  </view>
+  <!-- <view class='suggest' bindtap='suggesttap'>遇到问题？</view> -->
+</view>
+<view wx:if = "{{tipshow}}" class='savetips'>已编辑的游记已保存至 个人中心-我的动态</view>

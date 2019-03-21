@@ -1,0 +1,5 @@
+<view class = "ablumbox" wx:for = "{{ablumarr}}" >
+  <image src = "{{item.banner}}"  id = "{{item.id}}" bindtap = "ablumtap" data-tit = "{{item.title}}"></image>
+  <text class='numtit'>共{{item.points}}期</text>
+  <text class='tit'>{{item.title}}</text>
+</view>

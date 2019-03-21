@@ -1,0 +1,27 @@
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view wx:if = "{{intarr.length==0}}">
+  <view class='nonebox'>
+    <image src = "../../images/noneint.png"></image>
+    <text>暂时还没有意向哦</text>
+  </view>
+</view>
+<view class = "intentbox" wx:else>
+  <view class='sing' wx:for = "{{intarr}}">
+    <image src = "https://track.huiur.com{{item.banner[0]}}" class='productimg'></image>
+    <view class='rigbox'>
+      <text class='tit'>{{item.title}}</text>
+      <!-- <view class='tagbox'>
+        <text>三天四夜</text>
+        <text>豪华</text>
+      </view> -->
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text class='num'>{{item.price}}</text>
+        <text class='tex'>起</text>
+      </view>
+      <text wx:if = "{{item.status}}" class='status'>处理中</text>
+    </view>
+  </view>
+</view>

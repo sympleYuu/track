@@ -1,0 +1,63 @@
+<!--pages/message/message.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='toptab'>
+  <view class='messbox'><text class="{{tab==0?'active tit':'tit'}}" data-tab = "0" bindtap='messtab'>系统消息</text>
+  <text class='num' wx:if = "{{sysmes!=0}}">{{sysmes}}</text>
+  </view>
+  <view class='messbox'><text class="{{tab==1?'active tit':'tit'}}" data-tab = "1" bindtap='messtab'>互动消息</text>
+  <text class='num' wx:if = "{{likemes!=0}}">{{likemes}}</text>
+  </view>
+</view>
+<view class='contbox'>
+  <view class='cont01' wx:if = "{{tab==0}}">
+    <view class='nonebox' wx:if = "{{messarr01.length==0}}">
+      <image src = "../../images/nonemessage.png"></image>
+      <text>暂时还没有消息哦</text>
+    </view>
+    <view wx:else>
+      <view class='sing' wx:for = "{{messarr01}}">
+        <image src = "../../images/systemphoto.png"></image>
+        <view class='mess'>
+          <text class='tit1'>系统消息</text>
+          <text class='tit2'>{{item.message}}</text>
+        </view>
+        <text class='date'>{{item.timesmap}}</text>
+      </view>
+    </view>
+    
+  </view>
+  <view class='cont02' wx:else>
+    <view class='nonebox' wx:if = "{{messarr02.length==0}}">
+      <image src = "../../images/nonemessage.png"></image>
+      <text>暂时还没有消息哦</text>
+    </view>
+    <view wx:else>
+       <view class='sing' wx:for = "{{messarr02}}">
+        <view class='person'>
+          <image class='photo' src = "{{item.userinfo.avatarurl}}"></image>
+          <view class='rig'>
+            <text class='name'>{{item.userinfo.nickName}}</text>
+            <text class='date'>{{item.timesmap}}</text>
+          </view>
+          <view class='message'>
+            <!-- <image src = "../../images/thumpico.png"></image> -->
+            <text wx:if = "{{item.type=='1'}}">赞了</text>
+            <text wx:else>转发了</text>
+          </view>
+          <view class='foot' bindtap='jumpfoot' data-fid = "{{item.trackid}}">
+            <image mode = "aspectFill" src = "https://track.huiur.com{{item.trackinfo.banner}}"></image>
+            <view class='rigcont'>
+              <text class='tit'>{{item.trackinfo.title}}</text>
+              <text class='time'>{{item.trackinfo.created_at}}</text>
+            </view>
+          </view>
+        </view>
+        <text class='cointips' wx:if = "{{item.type=='1'}}">+20金币</text>
+        <text class='cointips' wx:else>+50金币</text>
+      </view>
+    </view>
+   
+  </view>
+</view>

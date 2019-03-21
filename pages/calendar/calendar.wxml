@@ -1,0 +1,6 @@
+<!--pages/calendar/calendar.wxml-->
+<view class='calebox'>
+  <view class='topdate'>
+    <text>2019年2月</text>
+  </view>
+</view>

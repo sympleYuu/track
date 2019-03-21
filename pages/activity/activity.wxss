@@ -1,0 +1,5 @@
+/* pages/activity/activity.wxss */
+.poster{
+  width: 100%;
+  
+}

@@ -1,0 +1,78 @@
+<!-- <view class='placebox' style='height:{{navH}}px;'></view> -->
+<swiper
+  indicator-dots="true"
+  autoplay="true"
+  interval="5000"
+  duration="500"
+  class='swiperbox'
+  indicator-color='rgba(0,0,0,.4)'
+  indicator-active-color='#ff7f01'
+>
+  <block wx:for="{{topbanner}}">
+    <swiper-item bindtap = "jumpactivity">
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+  <image bindtap='addprint' src = "../../images/exitfoot.png" class='exitfoot'></image>
+  
+
+  <!-- <view class='topbanner' bindtap='jumpexit'>
+    <image src = "{{topbanner}}"></image>
+  </view> -->
+
+  <!-- <view class='tabbot'>
+    <text bindtap='indextab' data-tab = "0" class="{{tab==0?'active':''}}">游记</text>
+    <text wx:if = "{{status==1}}" bindtap='indextab' data-tab = "1" class="{{tab==1?'active':''}}">视频专辑</text>
+  </view> -->
+  <view class='footlist' wx:if = "{{tab==0}}">
+    <view class='footbox' catchtap='jumpdetail' catchlongtap="deletefoot" bindtouchend = "touchend" wx:for = "{{footarr}}" id = "{{item.id}}" data-cover = "{{item.banner}}" data-title = "{{item.title}}">
+      <view class='personbox'>
+        <image src = "{{item.userinfo.avatarurl}}"></image>
+        <text>{{item.userinfo.nickName}}</text>
+      </view>
+      <text class='t1'>{{item.title}}</text>
+      <image class='cover' mode = "aspectFill" src = "https://track.huiur.com/{{item.banner}}"></image>
+      <view class='bot'>
+        
+        <button open-type='share' class='sharebtn' data-fid='{{item.id}}' catchtap='sharetap'>
+          <image src = "../../images/share.png"></image>
+        </button>
+        <view class='thump'>
+        <view class='thumpnum'>{{item.like}}</view>
+          <image class='un' data-fid='{{item.id}}' wx:if = "{{item.islike=='1'}}" catchtap='unthumptap' src = "../../images/thumph.png"></image>
+          <image class='un' data-fid='{{item.id}}' catchtap='thumptap' wx:else src = "../../images/thump.png"></image>
+          
+        </view>
+        
+      </view>
+    </view>
+    
+  </view>
+  <view class='ablumbox2' wx:else>
+    <view class = "ablumbox" wx:for = "{{ablumarr}}" >
+      <image src = "{{item.banner}}"  id = "{{item.id}}" bindtap = "ablumtap" data-tit = "{{item.title}}"></image>
+      <text class='numtit'>共{{item.points}}期</text>
+      <text class='tit'>{{item.title}}</text>
+    </view>
+  </view>
+  <view class='addbox' style='right:{{foright}}' catchtap='addprinttap'>
+    <image class='addfootprint' src = "../../images/naddfootprint.png"></image>
+    <view class='folef' catchtap='lefaddprint'></view>
+  </view>
+<view class='mask' bindtap='closebtntap' wx:if = "{{topupshow}}"></view>
+<view class='topup' wx:if = "{{topupshow}}">
+  <image class='topimg' src = "{{uptopimg}}"></image>
+  <text class='toptext'>1.用懒游星球小程序制作游记可获得奖金，制作完成度越高，获得金额越大；
+2.不得上传不良违法信息；
+3.游记不合格红包无法提现。
+  </text>
+  <view class='orgbtn' bindtap='jumpexitfoot'>
+    <image src='../../images/orgbtn.png'></image>
+    <text>立即参与</text>
+  </view>
+  <view class='viewdetail' bindtap = "jumpactivity">查看详情</view>
+</view>
+<view class='closebtn' bindtap='closebtntap' wx:if = "{{topupshow}}">
+  <image src = "../../images/close_icon.png"></image>
+</view>

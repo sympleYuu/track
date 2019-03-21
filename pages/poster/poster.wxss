@@ -1,0 +1,63 @@
+/* pages/poster/poster.wxss */
+.yellowbg{
+  width: 100%;
+  height: 345rpx;
+  background: #fed641;
+
+}
+.posterbox{
+  width: 692rpx;
+  height: 612rpx;
+  background: #fff;
+  box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, .1);
+  margin: 0 auto;
+  position: relative;
+  top: -190rpx;
+  border-radius: 4rpx;
+}
+.postertips{
+  font-size: 28rpx;
+  color: #383838;
+  line-height: 48rpx;
+  padding-top: 70rpx;
+  text-align: center;
+}
+.posterpic{
+  width: 646rpx;
+  height: 370rpx;
+  margin:0 auto;
+  margin-top: 52rpx;
+  background: #ddd;
+}
+.makebtn{
+  width: 320rpx;
+  height: 88rpx;
+  background: #fed641;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  box-sizing: border-box;
+  padding-top: 9rpx;
+  box-shadow: 0 5rpx 25rpx 1rpx rgba(146, 146, 146, .5);
+  float: left;
+}
+.makebtn text{
+  width: 300rpx;
+  height: 72rpx;
+  margin:0 auto;
+  border: 2rpx solid #aa7a3b;
+  border-radius: 42rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: #4a2310;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  
+}
+.btnsbox{
+  position: relative;
+  padding-left: 28rpx;
+  top: -60rpx;
+}
+.btnleft{
+  margin-right: 50rpx;
+}

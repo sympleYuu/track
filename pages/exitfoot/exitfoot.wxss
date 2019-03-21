@@ -1,0 +1,429 @@
+/* pages/exitfoot/exitfoot.wxss */
+.topbox{
+  width: 688rpx;
+  margin: 0 auto;
+  padding-top: 60rpx;
+}
+.placeholder{
+  font-size: 36rpx;
+  color: #bbb;
+}
+.topbox input{
+  color: #000;
+  font-size: 36rpx;
+}
+.coverbox{
+  width: 688rpx;
+  height: 392rpx;
+  margin-top: 35rpx;
+  position: relative;
+}
+.coverbox .cover{
+  width: 100%;
+  height: 100%;
+  /* box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, .15); */
+}
+.upcoverbtn{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 145rpx;
+  left: 147rpx;
+}
+.allexitbox{
+  width: 688rpx;
+  margin: 0 auto;
+  margin-top: 26rpx;
+  border-top: 2rpx solid #ddd;
+  padding-top: 35rpx;
+}
+.addrbox{
+  /* padding-top: 10rpx; */
+}
+.inputsta{
+  float: left;
+  width: 436rpx;
+  height: 73rpx;
+  background: #ededed;
+  margin-left: 26rpx;
+  border-radius: 9rpx;
+  position: relative;
+  top: -22rpx;
+}
+.localico{
+  float: left;
+  width: 24rpx;
+  height: 35rpx;
+  margin-top: 21rpx;
+  margin-left: 34rpx;
+}
+.addplace{
+  font-size: 32rpx;
+  color: #979797;
+}
+.addplace.red{
+  font-size: 32rpx;
+  color: #d90000;
+}
+.inputsta input{
+  float: left;
+  margin-left: 20rpx;
+  width: 350rpx;
+  padding-top: 10rpx;
+  font-size: 32rpx;
+  color: #000;
+  overflow: hidden;
+}
+.rigmenu{
+  float: right;
+  width: 45rpx;
+  height: 39rpx;
+  margin-right: 25rpx;
+  margin-top: -6rpx;
+  position: relative;
+}
+.rigmenu .list{
+  position: absolute;
+  top: 86rpx;
+  left: -105rpx;
+  width: 155rpx;
+  min-height: 80rpx;
+  background: #fff;
+  border-radius: 9rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, .15);
+
+}
+.rigmenu .list image{
+  width: 19rpx;
+  height: 29rpx;
+}
+.operlist{
+  width: 45rpx;
+  height: 44rpx;
+ 
+}
+.addnext{
+  clear: both;
+
+}
+.addnext image{
+  float: left;
+  width: 86rpx;
+  height: 86rpx;
+}
+.addnext text{
+  font-size: 28rpx;
+  color: #f99435;
+  line-height: 86rpx;
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+}
+.addfirst{
+  clear: both;
+  padding-top: 30rpx;
+}
+.addfirst::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.addfirst image{
+  float: left;
+  width: 86rpx;
+  height: 86rpx;
+}
+.addfirst text{
+  font-size: 32rpx;
+  color: #979797;
+  line-height: 86rpx;
+  margin-left: 45rpx;
+  float: left;
+}
+.imgsbox .sing{
+  width: 176rpx;
+  height: 176rpx;
+  float: left;
+  margin-right: 20rpx;
+  position: relative;
+  margin-bottom: 15rpx;
+}
+.imgsbox .sing:nth-of-type(3n){
+  margin-right: 0;
+}
+.imgsbox .sing image{
+  width: 100%;
+  height: 100%;
+}
+.stacontbox{
+  width: 578rpx;
+  /* float: right; */
+  margin-top: 22rpx;
+  margin-left: 48rpx;
+}
+.addpic{
+  float: left;
+  width: 176rpx;
+  height: 176rpx;
+}
+.addpic image{
+  width: 100%;
+  height: 100%;
+}
+.imgsbox .sing image.delico{
+  width: 49rpx;
+  height: 49rpx;
+  position: absolute;
+  top: 4rpx;
+  right: 4rpx;
+  opacity: .7;
+}
+.imgsbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.addrbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.addnext::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.stationbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.textbox{
+  clear: both;
+  /* padding-left: 48rpx; */
+  padding-top: 34rpx;
+}
+.textbox textarea{
+  width: 574rpx;
+  height: 102rpx;
+  border: 2rpx solid #ccc;
+  box-sizing: border-box;
+  padding: 10rpx;
+  font-size: 32rpx;
+  color: #000;
+}
+.textplace{
+  font-size: 32rpx;
+  color: #979797;
+}
+.delcover{
+  position: absolute;
+  width: 49rpx;
+  height: 49rpx;
+  right: 6rpx;
+  top: 10rpx;
+}
+.donebtn{
+  width: 100%;
+  height: 100rpx;
+  background: #fed641;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.donebtn text{
+  width: 100%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #000;
+}
+.footbox{
+  width: 100%;
+  /* min-height: 105vh;
+  padding-bottom: 200rpx; */
+  box-sizing: border-box;
+}
+.vedbox{
+  width: 572rpx;
+  height: 290rpx;
+  background: #ddd;
+  /* margin-top: 18rpx; */
+}
+.vedbox video{
+  width: 100%;
+  height: 100%;
+}
+.uptop01{
+  width: 450rpx;
+  height: 200rpx;
+  background: #fff;
+  position: fixed;
+  top: 100rpx;
+  left: 50%;
+  margin-left: -225rpx;
+  border-radius: 40rpx;
+}
+.uptop01 text{
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  width: 100%;
+  line-height: 80rpx;
+}
+.show01{
+  animation: show01 1.5s 1;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+}
+@keyframes show01
+{
+0% {top:-100rpx;}
+60% {top:100rpx;opacity: 1;}
+95% {opacity: 1;}
+100%{opacity: 0;}
+}
+.linkbox{
+  position: absolute;
+  width: 100%;
+  min-height: 0rpx;
+  background: #ededed;
+  top:74rpx;
+  left: 0;
+  box-sizing: border-box;
+  padding:0rpx 20rpx;
+  z-index: 2000;
+}
+.linkbox text{
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #666;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stationbox{
+  width: 700rpx;
+  margin: 0 auto;
+  border-left: 2rpx solid #d6d4cd;
+  position: relative;
+}
+.redpoint{
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  position: relative;
+  left: -10rpx;
+}
+.stanum{
+  font-size: 20rpx;
+  float: left;
+  color: #f99435;
+  line-height: 22rpx;
+}
+.stamain{
+  width: 700rpx;
+  height: auto;
+  float: right;
+  
+  margin-bottom: 60rpx;
+}
+.stamain::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.codeuptop{
+  width: 582rpx;
+  height: 680rpx;
+  position: fixed;
+  top: 150rpx;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.codeuptop image{
+  width: 100%;
+  height: 100%;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+}
+.codeuptop .tit{
+  position: absolute;
+  width: 100%;
+  top: 350rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #ff642b;
+}
+.codeuptop .code{
+  position: absolute;
+  width: 100%;
+  top: 430rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ff642b;
+}
+.codeuptop .btn{
+  width: 340rpx;
+  height: 76rpx;
+  position: absolute;
+  bottom: 70rpx;
+  left: 50%;
+  margin-left: -170rpx;
+}
+.codeuptop .btn image{
+  width: 100%;
+  height: 100%;
+}
+.codeuptop .btn text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 76rpx;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+}
+.orgbtn{
+  width: 246rpx;
+  height: 78rpx;
+  position: fixed;
+  bottom: 210rpx;
+  left: 50%;
+  margin-left: -123rpx;
+}
+.suggest{
+  position: fixed;
+  bottom: 130rpx;
+  width: 100%;
+  height: 60rpx;
+  font-size: 26rpx;
+  color: #ff7f01;
+  text-align: center;
+  line-height: 60rpx;
+}
+.orgbtn image{
+  width: 100%;
+  height: 100%;
+}
+.orgbtn text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 74rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  top: 0;
+  left: 0;
+}

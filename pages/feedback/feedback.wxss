@@ -1,0 +1,37 @@
+/* pages/feedback/feedback.wxss */
+.feedbackbox{
+  width: 700rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+}
+.feedbackbox textarea{
+  width: 700rpx;
+  height: 350rpx;
+  border:2rpx solid #dfdfdf;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+.feedbackbox input{
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #dfdfdf;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.feedbackbox button{
+  margin-top: 150rpx;
+  width: 396rpx;
+  height: 88rpx;
+  background: #f98b22;
+  color: #fff;
+  font-size: 36rpx;
+  border: none;
+}
+.feedbackbox button::after{
+  opacity: 0;
+}

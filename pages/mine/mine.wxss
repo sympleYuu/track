@@ -1,0 +1,230 @@
+/* pages/mine/mine.wxss */
+.minetop{
+  width: 100%;
+  height: 433rpx;
+  border-bottom-left-radius: 370rpx 50rpx;
+  border-bottom-right-radius: 370rpx 50rpx;
+  background: url(https://track.huiur.com/images/minetop.png) no-repeat center center;
+  background-size:cover; 
+  box-sizing: border-box;
+  padding-top: 98rpx;
+}
+.minetop .person{
+  padding-left:52rpx;
+  padding-top: 46rpx;
+  float: left;
+}
+.minetop .person .photo > image{
+  width: 138rpx;
+  height: 138rpx;
+  border-radius: 50%;
+  background: #ddd;
+  float: left;
+}
+.minetop .rig{
+  float: left;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+  width: 300rpx;
+}
+.minetop .rig text{
+  font-size: 36rpx;
+  color: #2f2f2f;
+}
+.minetop .person .gold{
+  margin-top: 12rpx;
+}
+.minetop .person .gold > image{
+  width: 26rpx;
+  height: 26rpx;
+  float: left;
+}
+.minetop .person .gold text{
+  font-size: 24rpx;
+  color: #fff;
+  float: left;
+  margin-left: 8rpx;
+  line-height: 26rpx;
+}
+.minetop .person .photo{
+  position: relative;
+  width: 138rpx;
+  height: 138rpx;
+  float: left;
+}
+.minetop .person .photo .level{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50%;
+  background: #fff3dd;
+  border: 2rpx solid #fff;
+  font-size: 15rpx;
+  position: absolute;
+  color: #ffae1d;
+  font-weight: bold;
+  line-height: 34rpx;
+  text-align: center;
+  box-sizing: border-box;
+  bottom: 0;
+  right: 0;
+}
+.signin{
+  float: right;
+  margin-top: 94rpx;
+  margin-right: 77rpx;
+  width: 106rpx;
+  height: 40rpx;
+  background: #ff8308;
+  border-radius: 20rpx;
+  color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.signed{
+  background: #ddd;
+  color: #fff;
+  font-size: 26rpx;
+}
+.contbox{
+  margin-top: 20rpx;
+}
+.contbox .sing{
+  padding-left: 30rpx;
+  height: 100rpx;
+  
+}
+.contbox .sing image{
+  width: 40rpx;
+  float: left;
+}
+.contbox .sing01 image{
+  width: 34rpx;
+  height: 32rpx;
+  margin-top: 35rpx;
+  margin-left: 4rpx;
+}
+.contbox .sing00 image{
+  width: 37rpx;
+  height: 37rpx;
+  margin-top: 30rpx;
+  margin-left: 4rpx;
+}
+.contbox .rig{
+  width: 653rpx;
+  float: right;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #e8e7e0;
+  position: relative;
+}
+.contbox .rig text.tit{
+  color: #1f1607;
+  font-size: 30rpx;
+  line-height: 98rpx;
+}
+.contbox .rig .num{
+  position: absolute;
+  top: 34rpx;
+  left: 130rpx;
+  background: #ff0505;
+  color: #fff;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+.contbox .sing02 image{
+  width: 37rpx;
+  height: 29rpx;
+  margin-top: 33rpx;
+  margin-left: 2rpx;
+}
+.contbox .sing03 image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 32rpx;
+  margin-left: 0rpx;
+}
+.contbox .sing04 image{
+  width: 30rpx;
+  height: 41rpx;
+  margin-top: 30rpx;
+  margin-left: 5rpx;
+}
+.contbox .sing05 image{
+  width: 38rpx;
+  height: 36rpx;
+  margin-top: 34rpx;
+  margin-left: 1rpx;
+}
+.contbox .sing06 image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 32rpx;
+  margin-left: 0rpx;
+}
+.contbox .sing05{
+  /* margin-top: 60rpx; */
+}
+.codeuptop{
+  width: 582rpx;
+  height: 680rpx;
+  position: fixed;
+  top: 150rpx;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.codeuptop image{
+  width: 100%;
+  height: 100%;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+}
+.codeuptop .tit{
+  position: absolute;
+  width: 100%;
+  top: 350rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #ff642b;
+}
+.codeuptop .code{
+  position: absolute;
+  width: 100%;
+  top: 430rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ff642b;
+}
+.codeuptop .btn{
+  width: 340rpx;
+  height: 76rpx;
+  position: absolute;
+  bottom: 70rpx;
+  left: 50%;
+  margin-left: -170rpx;
+}
+.codeuptop .btn image{
+  width: 100%;
+  height: 100%;
+}
+.codeuptop .btn text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 76rpx;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+}

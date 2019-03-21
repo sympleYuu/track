@@ -1,0 +1,48 @@
+<!--pages/list_first/list_first.wxml-->
+<view wx:if = "{{options_ad}}"></view>
+<view wx:else class='briefbox'>
+    <image class='bimg' mode = "aspectFill" src='https://youyue.huiur.com/{{topimg}}'></image>  
+    <text class='btitle'>{{pagetitle}}</text>
+    <text class='btext'>{{topbrief}}</text>
+</view>
+<view class='vlistbox' wx:for="{{vedArr}}" wx:for-item="itemName" id = "{{itemName.id}}"  catchtap="jumpdetal">
+  
+  
+  <view class='vid-veo'>
+     <image class='vdcoverimg' wx:if="{{itemName.playstate == 0}}" mode = "aspectFill" src="{{itemName.img_url}}" id = "{{itemName.id}}" data-oid = "{{itemName.user_id}}" catchtap="videochange"></image>
+    <video wx:else id = "{{itemName.id}}" data-vdid = "{{itemName.id}}" autoplay='true' class="vidplayer" controls = "true" bindplay = "startplay" bindended = "vedend"  src = "{{itemName.video_url}}" controls="true" ></video>
+    <image class='playbtn' style="display:{{itemName.playstate == 0?'block':'none'}}" src = "../../images/playbtn02.png" id = "{{itemName.id}}" data-oid = "{{itemName.user_id}}" catchtap="videochange"></image>
+     <!-- <video id = "{{itemName.id}}"  data-vdid = "{{itemName.id}}" class="vidplayer" controls = "false" bindplay = "startplay" objectFit = "cover" bindended = "vedend" src = "http://yue.frrrd.xyz{{itemName.video_url}}" >
+    <cover-image class="vdcoverimg" style='display:{{itemName.display}}'  mode = "center" src="{{itemName.img_url}}" id = "{{itemName.id}}"  catchtap="videoplay" />  
+    </video> -->
+        <!-- <cover-image class='vedpause' style='display:{{itemName.btndisplay}}'   src="../../images/playbtn.png"  ></cover-image> -->
+    <text class='vl-vdtitle'>{{itemName.title}}</text>
+    <text class='vl-distance'>{{itemName.dis}}</text>
+    <view class='viewbar'>
+      <image src = "../../images/vedviewico.png"></image>
+      <text>{{itemName.play_count}}次</text>
+    </view>
+  </view>
+  <view class='vl-person'>
+    <view class='vl-porbox' catchtap='otherstap' data-uid = "{{itemName.user_id}}"><image class='vl-portrait' src = "{{itemName.header}}" mode = "aspectFit"></image></view>
+    <view class='timebox'>
+      <text class='vl-username'>{{itemName.user_nickname}}</text>
+      <text class='vl-time'>{{itemName.create_time}}</text>
+    </view>
+    <view class='vl-oper'>
+      <view class='vl-thump' data-user_id = "{{itemName.user_id}}" data-video_id = "{{itemName.id}}" >
+        <image class='vl-thumpimg thumph' wx:if="{{itemName.isclick == 1}}" catchtap='catchcancel' data-video_id = "{{itemName.id}}" src = "../../images/nthumpico.png"></image>
+        <!-- catchtap='catchthump' -->
+        <image class='vl-thumpimg ' wx:else catchtap='catchclick' data-user_id = "{{itemName.user_id}}" data-video_id = "{{itemName.id}}" src = "../../images/nthump.png"></image>
+        <text class='vl-thumpnum'>{{itemName.click}}</text>
+      </view>
+      <navigator  class='vl-comm'>
+        <image class='vl-commimg' src = "../../images/ncomm.png"></image>
+        <text class='vl-commnum'>{{itemName.comment}}</text>
+      </navigator>
+      <button open-type="share" class='vl-share' catchtap='catchbtn' data-title="{{itemName.title}}" id = "{{itemName.id}}">
+        <image class='vl-shareimg' src = "../../images/nshare.png"></image>
+      </button>
+    </view>
+  </view>  
+</view>

@@ -1,0 +1,127 @@
+/* pages/ranking/ranking.wxss */
+page{
+  background: #eeeeee;
+}
+.eventimg{
+  width: 100%;
+  height: auto;
+}
+.rankbox{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 128rpx;
+  background: #fff;
+}
+.rankbox .photo{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  border-radius: 50%;
+  background: #fff4e0;
+  margin-left: 24rpx;
+  margin-top: 24rpx;
+}
+.rankbox .lef{
+  float: left;
+  margin-top: 30rpx;
+  margin-left: 22rpx;
+}
+.rankbox .name{
+  color: #000;
+  font-size: 30rpx;
+}
+.rankbox .code{
+  font-size: 22rpx;
+  color:#878787;
+}
+.rankbox .ranknum{
+  font-size: 30rpx;
+  color: #ff7f01;
+  line-height: 128rpx;
+  float: right;
+  margin-right: 33rpx;
+}
+.myrank::after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.totalbox{
+  width: 100%;
+  min-height: 500rpx;
+  margin-top: 25rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  padding-top: 24rpx;
+}
+.totalbox .sing{
+  width: 702rpx;
+  height: 88rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  box-shadow: 0 3rpx 10rpx 1rpx rgba(114, 114, 114, .1);
+  margin-bottom: 24rpx;
+}
+.totalbox .sing01{
+  background: #ff6e75;
+  margin-bottom: 24rpx;
+  box-shadow: 0 3rpx 10rpx 1rpx rgba(114, 0, 0, .3);
+}
+.totalbox .sing02{
+  background: #ffc547;
+  margin-bottom: 24rpx;
+  box-shadow: 0 3rpx 10rpx 1rpx rgba(114, 89, 0, .3);
+}
+.totalbox .sing03{
+  background: #6fbdff;
+  margin-bottom: 24rpx;
+  box-shadow: 0 3rpx 10rpx 1rpx rgba(0, 8, 114, .3);
+}
+.totalbox .rankico{
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 16rpx;
+  position: relative;
+}
+.totalbox .rankico image{
+  width: 68rpx;
+  height: 63rpx;
+}
+.totalbox .sing .photo{
+  width: 56rpx;
+  height: 56rpx;
+  float: left;
+  margin-top: 16rpx;
+}
+.totalbox .sing .name{
+  float: left;
+  font-size: 30rpx;
+  color: #20170b;
+  line-height: 88rpx;
+  margin-left: 20rpx;
+}
+.totalbox .sing01 .name,.totalbox .sing02 .name,.totalbox .sing03 .name{
+  color: #fff;
+}
+
+.totalbox .sing .codes{
+  font-size: 30rpx;
+  color: #20170b;
+  float: right;
+  line-height: 88rpx;
+  margin-right: 18rpx;
+}
+.totalbox .sing01 .codes,.totalbox .sing02 .codes,.totalbox .sing03 .codes{
+  color: #fff;
+}
+.tranknum{
+  color: #130801;
+  float: left;
+  font-size: 32rpx;
+  line-height:88rpx;
+  width: 60rpx;
+  text-align: center;
+  margin-left: 10rpx; 
+}

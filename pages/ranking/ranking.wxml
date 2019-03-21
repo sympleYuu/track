@@ -1,0 +1,50 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<!-- <image class='eventimg' mode = "widthFix" src = "{{eventimg}}"></image> -->
+<view class='rankbox'>
+  <view class='myrank'>
+    <image src = "{{meitem.avatarurl}}" class='photo'></image>
+    <view class='lef'>
+      <text class='name'>{{meitem.nickName}}</text>
+      <text class='code'>{{meitem.coin}}积分</text>
+    </view>
+    <text class='ranknum'>排名：{{meitem.rank}}</text>
+  </view>
+  <view class='totalbox'>
+    <block wx:for = "{{rankarr}}" wx:for-index = "idx">
+      <view class='sing sing01' wx:if = "{{idx==0}}">
+        <view class='rankico'>
+          <image src = "../../images/rank01.png"></image>
+        </view>
+        <image class='photo' src = "{{item.avatarurl}}"></image>
+        <text class='name'>{{item.nickName}}</text>
+        <text class='codes'>{{item.coin}}积分</text>
+      </view>
+      <view class='sing sing02' wx:if = "{{idx==1}}">
+        <view class='rankico'>
+          <image src = "../../images/rank02.png"></image>
+        </view>
+        <image class='photo' src = "{{item.avatarurl}}"></image>
+        <text class='name'>{{item.nickName}}</text>
+        <text class='codes'>{{item.coin}}积分</text>
+      </view>
+      <view class='sing sing03' wx:if = "{{idx==2}}">
+        <view class='rankico'>
+          <image src = "../../images/rank03.png"></image>
+        </view>
+        <image class='photo' src = "{{item.avatarurl}}"></image>
+        <text class='name'>{{item.nickName}}</text>
+        <text class='codes'>{{item.coin}}积分</text>
+      </view>
+      <view class='sing' wx:if = "{{idx>2}}">
+        <text class='tranknum'>{{idx+1}}</text>
+        <image class='photo' src = "{{item.avatarurl}}"></image>
+        <text class='name'>{{item.nickName}}</text>
+        <text class='codes'>{{item.coin}}积分</text>
+      </view>
+    </block>
+    
+  </view>
+</view>

@@ -1,0 +1,95 @@
+<!--pages/routebook/routebook.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='searchbar'>
+  <image class='ico' src = "../../images/searchico.png"></image>
+  <form bindsubmit="formSubmit">
+    <input name = "words" placeholder='搜索目的地'></input>
+    <button form-type="submit">
+      <image src = "../../images/sbtnbg.png"></image>
+      <text>搜 索</text>
+    </button>
+  </form>
+  
+</view>
+<view class='itemsbar'>
+  <view class='sing' bindtap='optiontap' data-btab = '0'>
+    <text wx:if = "{{barname[0]}}" style="color:#ff7f01">{{barname[0]}}</text>
+    <text wx:else style="color:{{btab==0?'#ff7f01':'#645e59'}}">目的地</text>
+    <image wx:if = "{{btab==0}}" src = "../../images/arrup.png"></image>
+    <image wx:else src = "../../images/arrdown.png"></image>
+  </view>
+  <view class='sing' bindtap='optiontap' data-btab = '1'>
+    <text wx:if = "{{barname[1]}}" style="color:#ff7f01">{{barname[1]}}</text>
+    <text wx:else style="color:{{btab==1?'#ff7f01':'#645e59'}}">旅行天数</text>
+    <image wx:if = "{{btab==1}}" src = "../../images/arrup.png"></image>
+    <image wx:else src = "../../images/arrdown.png"></image>
+  </view>
+  <view class='sing' bindtap='optiontap' data-btab = '2'>
+    <text wx:if = "{{barname[2]}}" style="color:#ff7f01">{{barname[2]}}</text>
+    <text wx:else style="color:{{btab==2?'#ff7f01':'#645e59'}}">行程主题</text>
+    <image wx:if = "{{btab==2}}" src = "../../images/arrup.png"></image>
+    <image wx:else src = "../../images/arrdown.png"></image>
+  </view>
+  <view class='sing' bindtap='optiontap' data-btab = '3'>
+    <text wx:if = "{{barname[3]}}" style="color:#ff7f01">{{barname[3]}}</text>
+    <text wx:else style="color:{{btab==3?'#ff7f01':'#645e59'}}">预算</text>
+    <image wx:if = "{{btab==3}}" src = "../../images/arrup.png"></image>
+    <image wx:else src = "../../images/arrdown.png"></image>
+  </view>
+</view>
+<view wx:if = "{{slideshow}}">
+  <view class='slidedownbox' wx:if = "{{flat}}">
+    <view class='sleftbox'>
+      <scroll-view scroll-y = "true" style='background:#f7f7f5'>
+        <view class='text' wx:for = "{{slidearr}}" id = "{{item.id}}" data-key="{{item.key}}" data-idx = "{{item.idx}}" data-name = "{{item.name}}" bindtap='slidetab'>{{item.name}}</view>
+
+      </scroll-view>
+    </view>
+    <view class='srightbox' >
+      <scroll-view scroll-y = "true">
+        <view class='text' wx:for = "{{slidearr2}}" id = "{{item.id}}" data-key="{{item.key}}" data-idx = "{{item.idx}}" data-name = "{{item.name}}" data-val="{{item.val}}" data-name = "{{item.name}}" bindtap='slidetab'>{{item.name}}</view>
+
+      </scroll-view>
+    </view>
+  </view>
+  <view class='slidedownbox flat' wx:else>
+    <scroll-view scroll-y = "true">
+      <view class='text' wx:for = "{{slidearr}}" id = "{{item.id}}" data-key="{{item.key}}" data-val="{{item.val}}" data-idx = "{{item.idx}}" data-name = "{{item.name}}" bindtap='slidetab'>{{item.name}}</view>
+     
+    </scroll-view>
+  </view>
+</view>
+<view class='contbox none' wx:if = "{{routearr.length==0}}">
+  <image src = "../../images/searchnone.png"></image>
+  <text>抱歉，未搜索到相关内容</text>
+</view>
+<view class='contbox' wx:else>
+  <view class='sing'>
+    <image src = "../../images/routelittle01.png"></image>
+    <view class='textbox'>
+      <text class='tit'>东京富士山关西9日亲子之旅，迪士尼乐园圆梦，游玩睡水陆两栖河马巴士...</text>
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text>7398</text>
+      </view>
+      <view class='tagbox'>
+        <text class='gray'>9天8晚</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='sing'>
+    <image src = "../../images/routelittle02.png"></image>
+    <view class='textbox'>
+      <text class='tit'>东京富士山关西9日亲子之旅，迪士尼乐园圆梦，游玩睡水陆两栖河马巴士...</text>
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text>7398</text>
+      </view>
+      <view class='tagbox'>
+        <text class='gray'>9天8晚</text>
+      </view>
+    </view>
+  </view> -->
+</view>

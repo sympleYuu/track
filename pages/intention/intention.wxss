@@ -1,0 +1,92 @@
+/* pages/intention/intention.wxss */
+.intentbox{
+  margin-top: 37rpx;
+}
+.intentbox .sing{
+  padding: 0 30rpx;
+}
+.intentbox .sing::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.intentbox .sing{
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.intentbox .productimg{
+  float: left;
+  width: 200rpx;
+  height: 200rpx;
+  background: #3653af;
+  border-radius: 9rpx;
+}
+.intentbox .rigbox .tit{
+  font-size:28rpx;
+  color: #1f1607;
+  line-height: 1.5;
+  width: 480rpx;
+  height: 84rpx;
+  overflow: hidden;
+}
+.intentbox .rigbox{
+  width: 480rpx;
+  float: right;
+  height: 214rpx;
+  border-bottom: 1rpx solid #e8e7e0;
+}
+.tagbox{
+  margin-top: 20rpx;
+}
+.tagbox text{
+  color: #ff7f00;
+  font-size: 22rpx;
+  line-height: 35rpx;
+  height: 35rpx;
+  border-radius: 17rpx;
+  padding: 0 15rpx;
+  background: #fff5eb;
+  float: left;
+  margin-right: 20rpx;
+}
+.intentbox .sing .price{
+  clear: left;
+  padding-top: 16rpx;
+}
+.intentbox .price text{
+  font-size: 22rpx;
+  color: #c1c1c1;
+  display: inline;
+  line-height: 37rpx;
+}
+.intentbox .price .num{
+  font-size: 36rpx;
+  color:#ff9e3e;
+  font-weight: bold;
+}
+.intentbox .price .ico{
+  font-size: 22rpx;
+  color:#ff9e3e;
+}
+.status{
+  font-size: 24rpx;
+  color: #f6810d;
+  position: absolute;
+  top: 90rpx;
+  right: 30rpx;
+
+}
+.nonebox{
+  padding-top: 130rpx;
+}
+.nonebox image{
+  width: 373rpx;
+  height: 221rpx;
+  margin: 0 auto;
+}
+.nonebox text{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 30rpx;
+}

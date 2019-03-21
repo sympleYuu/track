@@ -1,0 +1,67 @@
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='footbox'>
+  <view class='topbox'>
+    
+    <view class='coverbox'>
+      <image mode="aspectFill" class = "cover" src = "https://track.huiur.com/{{cover}}"></image>
+      <view class='botbar'>
+        <text>{{title}}</text>
+      </view>
+      
+    </view>
+    
+  </view>
+  <view class='allexitbox'>
+    <view class='stationbox' wx:for = "{{footarr}}" wx:for-index= "staidx">
+      <view class='addrbox'>
+        <image class='redpoint' src = "../../images/orpoint.png"></image>
+        <text class='stanum'>第{{capnum[staidx]}}站</text>
+        <view class='inputsta'>
+          <text>{{item.location}}</text>
+        </view>
+        
+      </view>
+      <view class='stamain'>
+        <view class='textbox'>
+          <text wx:if = "{{item.text}}">{{item.text}}
+          </text>
+        </view>
+        <view class='stacontbox'>
+          <view class='imgsbox imgsbox{{item.images.length}}' wx:if = "{{item.images}}">
+            <view class='sing' wx:for = "{{item.images}}" wx:for-item = "imgitem">
+              <image bindtap='previewimgs' data-img = "{{imgitem}}" data-arr = "{{item.images}}" mode = "aspectFill" src = "https://track.huiur.com/{{imgitem}}"></image>
+              
+            </view>
+            
+          </view>
+          <view class='vedbox' wx:if = "{{item.video}}">
+            <video src = "https://track.huiur.com/{{item.video.video}}"></video>
+          </view>
+        </view>
+        
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+<!-- <view class='donebtn'>
+  <text bindtap='jumpposter'>生成海报</text>
+  <button open-type='share'>分享给好友</button>
+</view> -->
+<view class='othersbox'>
+  <view class='lef' bindtap='thumptap'>
+    <image wx:if = "{{thumped}}" src = "../../images/thumph.png"></image>
+    <image wx:else src = "../../images/thump.png"></image>
+    <text>点赞</text>
+  </view>
+  <view class='rig'>
+    <button open-type='share'>
+      <image src = "../../images/share.png"></image>
+      <text>分享</text>
+    </button>
+    
+  </view>
+</view>

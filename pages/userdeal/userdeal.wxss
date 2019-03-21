@@ -1,0 +1,44 @@
+/* pages/userdeal/userdeal.wxss */
+.youyuelogo{
+  width: 178rpx;
+  height: 178rpx;
+  margin:0 auto;
+  margin-top: 70rpx;
+  display: block;
+}
+.dealh1{
+  font-size: 42rpx;
+  color: #000;
+  text-align: center;
+  margin-top:45rpx; 
+}
+.textcon{
+  width: 650rpx;
+  margin:0 auto;
+  margin-top: 90rpx;
+  font-size: 30rpx;
+  color: #444;
+  line-height:58rpx;
+  padding-bottom: 100rpx;
+}
+.textcon .box{
+  
+}
+.textcon .title{
+  color: #fbc800;
+  font-size: 48rpx;
+  margin-top: 80rpx;
+  line-height: 60rpx;
+}
+.textgray{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 58rpx;
+  margin-top: 45rpx;
+}
+.stitle{
+  font-size: 40rpx;
+  color: #333;
+  margin-top: 40rpx;
+  margin-bottom: -15rpx;
+}

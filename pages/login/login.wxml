@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<view class='graybar'></view>
+<view class='logbox01'>  
+  <view class='avatarbox'>
+    <open-data type="userAvatarUrl" class = "avatar"></open-data>
+  </view>
+    <open-data type="userNickName" class = "username"></open-data>
+</view>
+<view class='theinfo'>
+  <text class='logintext'>登录后应用将获得以下权限</text>
+  <view class='tips'>
+    <view></view>
+    <text>获得你的公开信息（昵称、头像等）</text>
+  </view>
+</view>
+<button wx:if = "{{check==1}}" class='loginbtn' open-type = "getUserInfo" bindgetuserinfo = "getuserinfo">授权登录</button>
+<button wx:else class='notloginbtn'>授权登录</button>
+<view class='readbox'>
+  <view  data-check = "{{check}}"><image bindtap='checkedtap' wx:if = "{{check==1}}" src = "../../images/checked.jpg"></image>
+  <view wx:else class='notcheck' bindtap='checktap'></view>
+  </view>
+  <text bindtap='dealjump' wx:if = "{{check==1}}">我已阅读用户协议</text>
+  <text class='nonargree' wx:else bindtap='dealjump'>请阅读并同意用户协议</text>
+</view>
+<!-- <view class='readbox'>
+  <view class='gray'></view>
+  <text>我已阅读用户协议</text>
+</view> -->

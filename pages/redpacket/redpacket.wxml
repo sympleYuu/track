@@ -1,0 +1,29 @@
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='withdraw'>
+  <view class='cash'>
+    <text class='lef'>余额：</text>
+    <view class='rig'>
+      <text>{{money}}</text>元
+    </view>
+  </view>
+  <text class='btn' wx:if = "{{money>0}}" bindtap='costuser'>提现</text>
+  <text class='btned' wx:else>提现</text>
+</view>
+<view class='cashtip' bindtap='costrule'>提现说明</view>
+<view class='redpacbox'>
+  <text class='tit'>共{{list.length}}个红包</text>
+  <view class='sing' wx:for = "{{list}}">
+    <image class='ico' src = "../../images/redpico.png"></image>
+    <view class='text'>
+      <text class='tx01'>您制作足迹获得红包奖励</text>
+      <text class='tx02' wx:if = "{{item.status=='0'}}">可提现</text>
+      <text class='tx03' wx:elif = "{{item.status=='1'}}">已提现</text>
+      <text class='tx02' wx:elif = "{{item.status=='2'}}">审核中</text>
+      <text class='tx04' wx:else>审核不通过</text>
+    </view>
+    <text class='cost'>￥{{item.money}}元</text>
+  </view>
+
+</view>

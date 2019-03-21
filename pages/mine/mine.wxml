@@ -1,0 +1,73 @@
+<!--pages/mine/mine.wxml-->
+<view class='minetop'>
+  <view class='person'>
+    <view class='photo'>
+      <image src = "{{avatarurl}}" ></image>
+      <text class='level'>LV{{level}}</text>
+    </view>
+    <view class='rig'>
+      <text>{{nickName}}</text>
+      <view class='gold'>
+        <image src = "../../images/goldico.png"></image>
+        <text>金币 : {{coin}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='signin signed' wx:if = "{{signed}}">已签到</view>
+  <view class='signin' wx:else bindtap = "signintap">签到</view>
+</view>
+<view class='contbox'>
+  <view class='sing sing00' bindtap='jumppacket' wx:if = "{{status==1}}"> 
+    <image class='ico' src='../../images/moneyico.png'></image>
+    <view class='rig' >
+      <text class='tit'>我的钱包</text>
+    </view>
+  </view>
+  <view class='sing sing01' bindtap='jumpmessage'> 
+    <image class='ico' src='../../images/myico01.png'></image>
+    <view class='rig'>
+      <text class='tit'>我的消息</text>
+      <text class='num' wx:if = "{{messagesnum!=0}}">{{messagesnum}}</text>
+    </view>
+  </view>
+  <view class='sing sing02' bindtap='jumpintention'> 
+    <image class='ico' src='../../images/myico02.png'></image>
+    <view class='rig'>
+      <text class='tit'>我的意向</text>
+    </view>
+  </view>
+  <view class='sing sing03' bindtap='jumpmoment'> 
+    <image class='ico' src='../../images/myico03.png'></image>
+    <view class='rig'>
+      <text class='tit'>我的动态</text>
+    </view>
+  </view>
+  <!-- <view class='sing sing04'> 
+    <image class='ico' src='../../images/myico04.png'></image>
+    <view class='rig'>
+      <text>我的地址</text>
+    </view>
+  </view> -->
+  <view class='sing sing05' bindtap='jumpfeedback'> 
+    <image class='ico' src='../../images/myico05.png'></image>
+    <view class='rig'>
+      <text class='tit'>建议反馈</text>
+    </view>
+  </view>
+  <!-- <view class='sing sing06'> 
+    <image class='ico' src='../../images/myico06.png'></image>
+    <view class='rig'>
+      <text>联系我们</text>
+    </view>
+  </view> -->
+</view>
+<view class='mask' wx:if = "{{codeshow}}"></view>
+<view class='codeuptop' wx:if = "{{codeshow}}">
+  <image src = "../../images/uptopjf.png"></image>
+  <text class='tit'>今日签到领取</text>
+  <text class='code'>5积分</text>
+  <view class='btn' bindtap='codeclosebtn'>
+    <image src = "../../images/jfuptopbtn.png"></image>
+    <text>我知道了</text>
+  </view>
+</view>

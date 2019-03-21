@@ -1,0 +1,58 @@
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='tabbar'>
+  <view bindtap='tabtap' data-tab = "0" class="{{tab==0?'active tabtext':'tabtext'}}">
+    <text>未发布</text>
+  </view>
+  <view bindtap='tabtap' data-tab = "1" class="{{tab==1?'active tabtext':'tabtext'}}">
+    <text>已发布</text>
+  </view>
+</view>
+<view wx:if = "{{tab==1}}">
+  <view class='footlist' wx:if = "{{comparr.length>0}}">
+    <view class='footbox' catchtap='jumpdetail' catchlongpress="deletefoot" bindtouchend = "touchend" wx:for = "{{comparr}}" id = "{{item.id}}" data-cover = "{{item.banner}}" data-title = "{{item.title}}">
+      <image class='cover' mode = "aspectFill" src = "https://track.huiur.com/{{item.banner}}"></image>
+      <view class='exitbox' catchtap='jumpfixit' data-xid = "{{item.id}}">修改</view>
+      <image class='delico' id = "{{item.id}}" catchtap='deletefoote' src = "../../images/fodelico.png"></image>
+      <view class='bot'>
+        <text class='t1'>{{item.title}}</text>
+        
+        <!-- <text class='t2'>(共{{item.points}}站)</text> -->
+      </view>
+    </view>
+    <!-- <view class='botbtn'>
+      <view class='makebtn' bindtap='jumpexit'><text>制作我的足迹</text></view>
+    </view> -->
+  </view>
+  <view class='firstimg' wx:else>
+    <view class='nonebox'>
+      <image src = "../../images/nonefoot.png"></image>
+      <text>暂时还没有作品哦</text>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view class='footlist' wx:if = "{{exitarr.length>0}}">
+    <view class='footbox' catchtap='jumpexitit' catchlongpress="deletefoot" bindtouchend = "touchend" wx:for = "{{exitarr}}" id = "{{item.id}}" data-cover = "{{item.banner}}" data-title = "{{item.title}}">
+      <image class='cover' mode = "aspectFill" src = "https://track.huiur.com/{{item.banner}}"></image>
+      <view class='exitbox'>继续编辑</view>
+      <image class='delico' id = "{{item.id}}" catchtap='deletefoote' src = "../../images/fodelico.png"></image>
+      <view class='bot'>
+        <text class='t1'>{{item.title}}</text>
+        
+        <!-- <text class='t2'>(共{{item.points}}站)</text> -->
+      </view>
+    </view>
+    <!-- <view class='botbtn'>
+      <view class='makebtn' bindtap='jumpexit'><text>制作我的足迹</text></view>
+    </view> -->
+  </view>
+  <view class='firstimg' wx:else>
+    <view class='nonebox'>
+      <image src = "../../images/nonefoot.png"></image>
+      <text>暂时还没有作品哦</text>
+    </view>
+  </view>
+</view>
+

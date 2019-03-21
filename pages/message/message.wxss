@@ -1,0 +1,183 @@
+/* pages/message/message.wxss */
+.toptab{
+  width: 100%;
+  height: 102rpx;
+  text-align: center;
+}
+.toptab text.tit{
+  display: inline-block;
+  color: #8a8a8a;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  padding: 0 50rpx;
+}
+.toptab text.active{
+  color: #000;
+  position: relative;
+}
+.toptab text.active::after{
+  display: block;
+  content: "";
+  width: 40rpx;
+  height: 4rpx;
+  position: absolute;
+  left:50%;
+  margin-left: -20rpx;
+  background: #ff8308;
+  bottom: 5rpx;
+  border-radius: 2rpx;
+}
+.cont01 .sing image{
+  width: 89rpx;
+  height: 89rpx;
+  float: left;
+  margin-top: 20rpx;
+}
+.cont01 .sing{
+  width: 100%;
+  min-height: 132rpx;
+  border-bottom: 1rpx solid #e8e7e0;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  position: relative;
+}
+.cont01 .sing .mess{
+  float: left;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #000;
+  padding-top: 30rpx;
+  width: 570rpx;
+}
+.cont01 .sing .tit2{
+  font-size: 25rpx;
+  color: #585858;
+  line-height: 1.5;
+}
+.cont01 .sing::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.cont01 .sing .date{
+  position: absolute;
+  right: 30rpx;
+  top: 25rpx;
+  font-size: 22rpx;
+  color: #b0b0b0;
+}
+.cont02 .sing .photo{
+  width: 67rpx;
+  height: 67rpx;
+  float: left;
+  border-radius: 50%;
+}
+.cont02 .sing .rig{
+  float: left;
+  margin-left: 25rpx;
+}
+.cont02 .sing{
+  padding: 0 30rpx;
+  position: relative;
+  border-bottom: 1rpx solid #e8e7e0;
+  padding-bottom: 22rpx;
+  margin-bottom: 30rpx;
+}
+.cont02 .sing .name{
+  font-size: 28rpx;
+  color: #000;
+}
+.cont02 .sing .date{
+  color:#b0b0b0;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+.cont02 .sing .message{
+  clear: left;
+  padding-top: 10rpx;
+}
+.cont02 .sing .message image{
+  width: 30rpx;
+  height: 29rpx;
+  display: inline-block;
+}
+.cont02 .sing .message text{
+  font-size: 28rpx;
+  color: #000;
+  display: inline-block;
+  line-height: 30rpx;
+  margin-left: 10rpx;
+}
+.cont02 .foot{
+  width: 684rpx;
+  height: 162rpx;
+  border-radius: 8rpx;
+  margin-top: 12rpx;
+  background: #f8f8f8;
+}
+.cont02 .foot image{
+  width: 230rpx;
+  height: 162rpx;
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+  float: left;
+  background: #e8e7e0;
+}
+.cont02 .foot .rigcont{
+  width: 450rpx;
+  float: left;
+  padding-top: 12rpx;
+}
+.cont02 .foot .rigcont .tit{
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #1f1607;
+  padding-left: 22rpx;
+  height: 84rpx;
+  overflow: hidden;
+}
+.cont02 .foot .rigcont .time{
+  font-size: 22rpx;
+  color: #8b8b8b;
+  padding-left: 22rpx;
+  margin-top: 5rpx;
+}
+.cointips{
+  position: absolute;
+  right: 32rpx;
+  top: 20rpx;
+  color: #ff8308;
+  font-size: 22rpx;
+
+}
+.nonebox{
+  padding-top: 130rpx;
+}
+.nonebox image{
+  width: 373rpx;
+  height: 221rpx;
+  margin: 0 auto;
+}
+.nonebox text{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.messbox{
+  display: inline-block;
+  position: relative;
+}
+.toptab text.num{
+  position: absolute;
+  font-size: 18rpx;
+  color: #fff;
+  background: #ff2121;
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+  right: 23rpx;
+  top: 16rpx;
+  line-height: 30rpx;
+  text-align: center;
+}

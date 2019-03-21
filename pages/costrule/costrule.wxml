@@ -1,0 +1,4 @@
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<text class='rulebox'>{{rule}}</text>

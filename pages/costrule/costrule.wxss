@@ -1,0 +1,6 @@
+/* pages/costrule/costrule.wxss */
+.rulebox{
+  padding: 20rpx;
+  color: #333;
+  font-size: 28rpx;
+}

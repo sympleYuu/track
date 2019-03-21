@@ -1,0 +1,18 @@
+<!--pages/plaza/plaza.wxml-->
+<view class='tabbar'>
+  <view class='cont'>
+    <text class='active'>视频</text>
+    <text>广场</text>
+  </view>
+</view>
+<view class='contbox'>
+  <view class='plazabox'>
+    <view class='sing'>
+      <view class='person'>
+        <image src = ""></image>
+        <text>大飞狼</text>
+      </view>
+      <text class='tit'>东京富士山关西9日亲子之旅，迪士尼乐园圆梦，游玩睡水陆两栖河马巴士.</text>
+    </view>
+  </view>
+</view>

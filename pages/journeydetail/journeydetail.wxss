@@ -1,0 +1,172 @@
+/* pages/journeydetail/journeydetail.wxss */
+.topbox{
+  width: 100%;
+  height: 394rpx;
+  background: #9c8dc4;
+  position: relative;
+}
+.topbox image{
+  width: 100%;
+  height: 100%;
+}
+.topbox .share{
+  
+}
+.topbox .days{
+  position: absolute;
+  top: 0rpx;
+  left: 20rpx;
+  font-size: 34rpx;
+  color: #fff;
+  display: inline;
+}
+.topbox .days text{
+  font-size: 64rpx;
+  color: #fff;
+  display: inline;
+}
+.maininfo{
+  padding: 0 25rpx;
+  padding-bottom: 30rpx;
+}
+.maininfo .tit{
+  font-size:32rpx;
+  line-height:1.5;
+  color:#1f1607;
+  padding-top: 15rpx;
+}
+.maininfo .desc{
+  font-size: 26rpx;
+  color: #4c4c4c;
+  line-height: 1.8;
+  margin-top: 10rpx;
+}
+.graybar{
+  width: 100%;
+  height: 16rpx;
+  background: #ebeae1;
+}
+.contbox{
+  padding: 0 25rpx;
+  padding-top: 30rpx;
+}
+.contbox .title::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.contbox .title image{
+  width: 36rpx;
+  height: 36rpx;
+  float: left;
+}
+.contbox .title text{
+  font-size: 30rpx;
+  color: #160d03;
+  float: left;
+  line-height: 36rpx;
+  margin-left: 16rpx;
+}
+.contbox .con{
+  margin-top: 30rpx;
+}
+.contbox .con rich-text{
+  /* font-size: 28rpx;
+  line-height: 1.5; */
+}
+.contbox{
+  padding-bottom: 140rpx;
+  box-sizing:border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.botbar{
+  position: fixed;
+  width: 100%;
+  height: 98rpx;
+  background: #fff;
+  box-shadow: 0 -2rpx 20rpx rgba(245, 245, 245, .5);
+  bottom: 0;
+  left: 0;
+}
+.botbar .chat{
+  width: 120rpx;
+  box-sizing: border-box;
+  float: left;
+  margin-top: 25rpx;
+  border-right: 1rpx solid #bdbdbd;
+  height: 42rpx;
+}
+.botbar .chat image{
+  width: 42rpx;
+  height: 42rpx;
+  margin: 0 auto;
+}
+.botbar .price{
+  float: left;
+  color: #8c8b8a;
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+}
+.botbar .price text{
+  display: inline;
+
+}
+.botbar .price text.ico{
+  font-size: 26rpx;
+  color:#ff8308;
+}
+.botbar .price text.num{
+  font-size: 40rpx;
+  color:#ff8308;
+}
+.orbtn{
+  width: 215rpx;
+  height: 78rpx;
+  float: right;
+  margin-top: 7rpx;
+  margin-right: 15rpx;
+  position: relative;
+}
+.orbtn image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.orbtn text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+.sharebtn{
+  position: absolute;
+  top: 27rpx;
+  right: 24rpx;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.sharebtn image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.sharebtn::after{
+  opacity: 0;
+}
+.retbtn{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border: 1rpx solid #fff;
+  border-radius: 6rpx;
+  padding: 5rpx 10rpx;
+}

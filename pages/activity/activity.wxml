@@ -1,0 +1,5 @@
+<!--pages/activity/activity.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<image class='poster' mode = "widthFix" src = "https://track.huiur.com/images/ruleposter.jpg"></image> 

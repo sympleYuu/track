@@ -1,0 +1,428 @@
+/* pages/exitfoot/exitfoot.wxss */
+.topbox{
+  width: 688rpx;
+  margin: 0 auto;
+}
+.placeholder{
+  font-size: 36rpx;
+  color: #bbb;
+}
+.topbox input{
+  color: #000;
+  font-size: 36rpx;
+}
+.coverbox{
+  width: 688rpx;
+  height: 392rpx;
+  margin-top: 22rpx;
+  position: relative;
+}
+.coverbox .cover{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, .15);
+}
+.botbar{
+  position: absolute;
+  width: 100%;
+  height: 90rpx;
+  background: rgba(255, 255, 255, .6);
+  left: 0;
+  bottom: 0;
+}
+.botbar text{
+  font-size: 37rpx;
+  line-height: 90rpx;
+  margin-left: 35rpx;
+  color: #000;
+}
+.upcoverbtn{
+  position: absolute;
+  width: 396rpx;
+  height: 116rpx;
+  top: 145rpx;
+  left: 147rpx;
+}
+.allexitbox{
+  width: 718rpx;
+  margin: 0 auto;
+  margin-top: 26rpx;
+  /* border-top: 2rpx solid #ddd; */
+  padding-top: 30rpx;
+  padding-bottom: 120rpx;
+}
+.addrbox{
+  /* padding-top: 10rpx; */
+}
+.stanum{
+  font-size: 20rpx;
+  float: left;
+  color: #f99435;
+  line-height: 22rpx;
+}
+.inputsta{
+  float: left;
+  position: relative;
+  top: -3rpx;
+}
+.localico{
+  float: left;
+  width: 24rpx;
+  height: 35rpx;
+  margin-top: 21rpx;
+  margin-left: 34rpx;
+}
+.addplace{
+  font-size: 32rpx;
+  color: #979797;
+}
+.inputsta text{
+  float: left;
+  margin-left: 23rpx;
+  width: 500rpx;
+  font-size: 30rpx;
+  color: #1f1607;
+  overflow: hidden;
+  line-height: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.operlist{
+  float: left;
+  width: 45rpx;
+  height: 39rpx;
+  margin-left: 30rpx;
+  margin-top: 18rpx;
+}
+.addnext{
+  clear: both;
+
+}
+.addnext image{
+  float: left;
+  width: 86rpx;
+  height: 86rpx;
+}
+.addnext text{
+  font-size: 32rpx;
+  color: #979797;
+  line-height: 86rpx;
+  margin-left: 45rpx;
+  float: left;
+}
+.imgsbox .sing{
+  width: 176rpx;
+  height: 176rpx;
+  float: left;
+  margin-right: 20rpx;
+  position: relative;
+  
+}
+.imgsbox1 .sing{
+  width: 674rpx;
+  height: 380rpx;
+  float: left;
+  margin-right: 20rpx;
+  position: relative;
+}
+.imgsbox2 .sing,.imgsbox4 .sing{
+  width: 328rpx;
+  height: 198rpx;
+  float: left;
+  margin-right: 16rpx;
+  position: relative;
+}
+.imgsbox3 .sing,.imgsbox6 .sing,.imgsbox5 .sing{
+  width: 214rpx;
+  height: 148rpx;
+  float: left;
+  margin-right: 16rpx;
+  position: relative;
+}
+.imgsbox6 .sing,.imgsbox4 .sing,.imgsbox5 .sing{
+  margin-bottom: 10rpx;
+}
+
+.imgsbox2 .sing:nth-of-type(2n),.imgsbox4 .sing:nth-of-type(2n){
+  margin-right: 0;
+}
+
+
+.imgsbox3 .sing:nth-of-type(3n),.imgsbox6 .sing:nth-of-type(3n),.imgsbox5 .sing:nth-of-type(3n){
+  margin-right: 0rpx;
+}
+.imgsbox .sing image{
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+}
+.stacontbox{
+  width: 674rpx;
+  float: left;
+  margin-top: 16rpx;
+  margin-left: 25rpx;
+}
+.imgsbox .addpic{
+  float: left;
+  width: 176rpx;
+  height: 176rpx;
+}
+.imgsbox .addpic image{
+  width: 100%;
+  height: 100%;
+}
+.imgsbox .sing image.delico{
+  width: 49rpx;
+  height: 49rpx;
+  position: absolute;
+  top: 4rpx;
+  right: 4rpx;
+  opacity: .7;
+}
+.imgsbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.addrbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.addnext::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.stationbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.textbox{
+  clear: both;
+  padding-left: 25rpx;
+  padding-top: 20rpx;
+}
+.textbox text{
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 10rpx; */
+  font-size: 28rpx;
+  color: #333;
+}
+.stamain{
+  width: 700rpx;
+  height: auto;
+  float: right;
+  
+  margin-bottom: 60rpx;
+}
+.stamain::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.textplace{
+  font-size: 32rpx;
+  color: #979797;
+}
+.delcover{
+  position: absolute;
+  width: 49rpx;
+  height: 49rpx;
+  right: 6rpx;
+  top: 10rpx;
+}
+.donebtn{
+  width: 100%;
+  height: 100rpx;
+  background: #fed641;
+}
+.donebtn text{
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #000;
+  float: left;
+
+}
+.donebtn button{
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #000;
+  float: left;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+.donebtn button::after{
+  opacity: 0;
+}
+.footbox{
+  width: 100%;
+  min-height: calc(100vh - 100rpx);
+  padding-bottom: 50rpx;
+  box-sizing: border-box;
+}
+.vedbox{
+  width: 674rpx;
+  height: 380rpx;
+  background: #ddd;
+
+}
+.vedbox video{
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+}
+.redpoint{
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  position: relative;
+  left: -10rpx;
+}
+.stationbox{
+  width: 700rpx;
+  margin: 0 auto;
+  border-left: 2rpx solid #d6d4cd;
+  position: relative;
+}
+.allexitbox .stationbox:last-of-type .stamain{
+  margin-bottom: 0;
+}
+.allexitbox .stationbox:last-of-type::before{
+  display: block;
+  content: "";
+  width: 5rpx;
+  height: 100%;
+  position: absolute;
+  left: -2rpx;
+  top: 0;
+  background: #fff;
+}
+.othersbox{
+  width: 100%;
+  height: 100rpx;
+  background: #fcfcfc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.othersbox .lef,.othersbox .rig{
+  width: 50%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 25rpx;
+  line-height: 42rpx;
+}
+.othersbox .lef image{
+  display: inline-block;
+  width: 40rpx;
+  height: 42rpx;
+  vertical-align: top;
+}
+.othersbox .lef text{
+  font-size: 28rpx;
+  color: #000;
+  margin-left: 10rpx;
+  display: inline-block;
+  line-height: 42rpx;
+}
+.othersbox .rig image{
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+.othersbox .rig text{
+  font-size: 28rpx;
+  color: #000;
+  margin-left: 10rpx;
+  display: inline-block;
+  line-height: 42rpx;
+}
+.othersbox .rig button{
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+}
+.othersbox .rig button::after{
+  opacity: 0;
+}
+.retbtn{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border: 1rpx solid #fff;
+  border-radius: 6rpx;
+  padding: 5rpx 10rpx;
+}
+.codeuptop{
+  width: 582rpx;
+  height: 680rpx;
+  position: fixed;
+  top: 150rpx;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.codeuptop image{
+  width: 100%;
+  height: 100%;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+}
+.codeuptop .tit{
+  position: absolute;
+  width: 100%;
+  top: 350rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #ff642b;
+}
+.codeuptop .code{
+  position: absolute;
+  width: 100%;
+  top: 430rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ff642b;
+}
+.codeuptop .btn{
+  width: 340rpx;
+  height: 76rpx;
+  position: absolute;
+  bottom: 70rpx;
+  left: 50%;
+  margin-left: -170rpx;
+}
+.codeuptop .btn image{
+  width: 100%;
+  height: 100%;
+}
+.codeuptop .btn text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 76rpx;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+}

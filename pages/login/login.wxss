@@ -1,0 +1,141 @@
+/* pages/login/login.wxss */
+.graybar{
+  width: 100%;
+  height: 20rpx;
+  background: #f0f0f0;
+}
+.logbox01{
+  width: 100%;
+  height: 366rpx;
+  box-shadow: 0 -3rpx 10rpx rgba(100, 100, 100, .1);
+  box-sizing: border-box;
+  padding-top: 86rpx;
+}
+.loginbtn{
+  margin:0 auto;
+  margin-top: 40rpx;
+  width: 670rpx;
+  height: 106rpx;
+  border:none;
+  background: #fbc800;
+  line-height: 106rpx;
+}
+.notloginbtn{
+  margin:0 auto;
+  margin-top: 40rpx;
+  width: 670rpx;
+  height: 106rpx;
+  border:none;
+  background: #ccc;
+  line-height: 106rpx;
+}
+.loginbtn::after{
+  opacity: 0;
+}
+.notloginbtn::after{
+  opacity: 0;
+}
+.logbox01 .photo{
+  width: 140rpx;
+  height: 140rpx;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.avatarbox{
+  width: 140rpx;
+  height: 140rpx;
+  margin:0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.username{
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+  display: block;
+  margin-top: 38rpx;
+}
+.theinfo{
+  width: 625rpx;
+  border-top: 1rpx solid #ccc;
+  padding-top: 68rpx;
+  margin:0 auto;
+}
+.logintext{
+  font-size: 32rpx;
+  color: #333;
+}
+.tips{
+  margin-top: 38rpx;
+}
+.tips view{
+  float: left;
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  background: #d7d7d7;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+.tips text{
+  font-size: 30rpx;
+  float: left;
+  color: #666;
+}
+.tips::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.readbox{
+  margin-top: 30rpx;
+}
+.readbox view{
+  display: block;
+  /* width: 34rpx;
+  height: 34rpx; */
+  float: left;
+  padding-left: 48rpx;
+  padding-right: 30rpx;
+}
+.readbox view image{
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  vertical-align: top;
+}
+.notcheck{
+  width: 34rpx;
+  height: 34rpx;
+  box-sizing: border-box;
+  border:4rpx solid #ccc;
+  border-radius: 50%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  /* margin-right: 30rpx; */
+}
+.readbox text{
+  font-size: 28rpx;
+  color: #fbc800;
+  float: left;
+  line-height: 36rpx;
+  /* padding-left: 30rpx; */
+}
+.readbox text.nonargree{
+  color: #ccc;
+}
+.readbox .gray{
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  border:4rpx solid #ccc;
+  padding:0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,256 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.firstimg image{
+  width: 724rpx;
+  height: 746rpx;
+  margin: 0 auto;
+  margin-top: 45rpx;
+}
+.makebtn{
+  width: 380rpx;
+  height: 100rpx;
+  background: #fed641;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  margin-top: 100rpx;
+  box-sizing: border-box;
+  padding-top: 8rpx;
+  box-shadow: 0 5rpx 25rpx 1rpx rgba(146, 146, 146, .5);
+}
+.makebtn text{
+  width: 356rpx;
+  height: 85rpx;
+  margin:0 auto;
+  border: 2rpx solid #aa7a3b;
+  border-radius: 42rpx;
+  line-height: 85rpx;
+  text-align: center;
+  color: #4a2310;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  
+}
+.footlist{
+  padding-top: 20rpx;
+  padding-bottom: 170rpx;
+}
+.footbox{
+  width: 700rpx;
+  min-height: 400rpx;
+  margin:0 auto;
+  background: #fff;
+  /* box-shadow: 0 2rpx 30rpx rgba(0, 0, 0, .2); */
+  margin-bottom: 45rpx;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 7rpx;
+}
+.footbox image.cover{
+  width: 700rpx;
+  height: 400rpx;
+  margin:0 auto;
+  background: #fed641;
+  border-radius: 7rpx;
+}
+.footbox .bot{
+  width: 100%;
+  height: auto;
+}
+.footbox .bot::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.footbox .bot .t1{
+  font-size: 30rpx;
+  color: #1f1607;
+  line-height: 1.5;
+  /* margin-left: 38rpx; */
+  overflow: hidden;
+  width: 100%;
+  margin-top: 15rpx;
+}
+.footbox .bot .t2{
+  font-size: 28rpx;
+  color: #000;
+  line-height: 100rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+.botbtn{
+  width: 100%;
+  height: 165rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.botbtn .makebtn{
+  width: 380rpx;
+  height: 100rpx;
+  background: #fed641;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  margin-top: 29rpx;
+  box-sizing: border-box;
+  padding-top: 8rpx;
+  box-shadow: 0 5rpx 25rpx 1rpx rgba(146, 146, 146, .5);
+}
+.addfootprint{
+  width: 237rpx;
+  height: 98rpx;
+}
+.addbox{
+  position: fixed;
+  right: -138rpx;
+  bottom: 200rpx;
+  width: 237rpx;
+  height: 98rpx;
+  z-index: 100;
+  transition: .2s all ease;
+}
+.folef{
+  position: absolute;
+  width: 100rpx;
+  height: 98rpx;
+  top: 0;
+  left: 0;
+}
+.personbox{
+  padding-top: 20rpx;
+  width: 500rpx;
+  float: left;
+}
+.personbox::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.personbox image{
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 50%;
+  background: #edaf39;
+  float: left;
+}
+.personbox text{
+  float: left;
+  font-size: 28rpx;
+  color: #645e59;
+  margin-left: 18rpx;
+}
+.footbox .thump{
+  float: right;
+  width: 40rpx;
+  height: 42rpx;
+  margin-top: 15rpx;
+}
+.footbox .thump image{
+  width: 100%;
+  height: 100%;
+}
+.footbox .sharebtn{
+  float: right;
+  width: 36rpx;
+  height: 36rpx;
+  padding: 0;
+  background: transparent;
+  margin-top: 21rpx;
+  margin-left: 76rpx;
+}
+.footbox .sharebtn::after{
+  opacity: 0;
+}
+.footbox .sharebtn image{
+  width: 100%;
+  height: 100%;
+}
+.nonebox{
+  padding-top: 130rpx;
+}
+.nonebox image{
+  width: 373rpx;
+  height: 221rpx;
+  margin: 0 auto;
+}
+.nonebox text{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 32rpx;
+}
+.tabbar{
+  width: 400rpx;
+  margin: 0 auto;
+  height: 60rpx;
+  padding-top: 20rpx;
+}
+.tabbar .tabtext{
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  position: relative;
+  height: 55rpx;
+  color: #999;
+}
+.tabbar::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.tabbar .tabtext.active{
+  color: #333;
+}
+.tabbar .tabtext.active::after{
+  content: "";
+  position: absolute;
+  width: 50rpx;
+  height: 4rpx;
+  border-radius: 2rpx;
+  background: #f78413;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25rpx;
+}
+.exitbox{
+  width: 240rpx;
+  height: 72rpx;
+  background: rgba(0, 0, 0, .33);
+  border-radius: 35rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -120rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 72rpx;
+  top: 167rpx;
+}
+.delico{
+  position: absolute;
+  top: 346rpx;
+  right: 0;
+  width: 53rpx;
+  height: 54rpx;
+
+}

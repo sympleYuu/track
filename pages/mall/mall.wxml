@@ -1,0 +1,130 @@
+<!-- <swiper
+  indicator-dots="true"
+  autoplay="true"
+  interval="5000"
+  duration="500"
+  class='swiperbox'
+  indicator-color='rgba(0,0,0,.4)'
+  indicator-active-color='#ff7f01'
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='kkarea'>
+  <view class='sing' bindtap='routetap'>
+    <image src = "../../images/kkicon01.png"></image>
+    <text>路线定制</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon02.png"></image>
+    <text>签证</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon03.png"></image>
+    <text>酒店</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon04.png"></image>
+    <text>民宿</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon05.png"></image>
+    <text>境外保险</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon06.png"></image>
+    <text>接送机</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon07.png"></image>
+    <text>景点门票</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon08.png"></image>
+    <text>餐饮</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon09.png"></image>
+    <text>导游服务</text>
+  </view>
+  <view class='sing' bindtap='visatap'>
+    <image src = "../../images/kkicon10.png"></image>
+    <text>租车</text>
+  </view>
+</view>
+<view class='graybar'></view>
+<view class='placebox'>
+  <view class='titlebox' bindtap='placetap'>
+    <text class='h1'>目的地精选</text>
+    <text class='h2'>不一样的风景不一样的你</text>
+    <image class='arrrig' src = "../../images/arr_rig.png"></image>
+  </view>
+  <scroll-view class='placescroll' scroll-x='true' bindtap='placetap'>
+    <view class='scrollsing'>
+      <image src = "../../images/place01.png"></image>
+      <text class='h1'>#日本</text>
+      <text class='h2'>人均:1.2万</text>
+    </view>
+    <view class='scrollsing'>
+      <image src = "../../images/place02.png"></image>
+      <text class='h1'>#泰国</text>
+      <text class='h2'>人均:1.2万</text>
+    </view>
+    <view class='scrollsing'>
+      <image src = "../../images/place03.png"></image>
+      <text class='h1'>#土耳其</text>
+      <text class='h2'>人均:1.2万</text>
+    </view>
+    <view class='scrollsing'>
+      <image src = "../../images/place01.png"></image>
+    </view>
+  </scroll-view>
+</view> -->
+<!-- <view class='topimg' bindtap='jumpper'>
+  <image src = "https://track.huiur.com/images/personalized.png"></image>
+</view> -->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}" shownav = "{{shownav}}" ></navbar>
+</view>
+<image bindtap='jumpintent' src="{{intentimg}}" mode = "widthFill" class="topimg"/>
+<!-- <swiper class='swiperbox'
+  indicator-color='rgba(0,0,0,.4)' indicator-dots = "true"
+  indicator-active-color='#ff7f01' autoplay = "true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image data-cid = "{{item.id}}" bindtap='swipertap' src="{{item.src}}" mode = "widthFix" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper> -->
+<view class='routebox'>
+  <view class='titlebox'>
+    <text class='h1'>热门定制路线</text>
+    <text class='h2'>资深定制师专属定制</text>
+    <image class='arrrig' src = "../../images/arr_rig.png"></image>
+  </view>
+  <view class='cont'>
+    <view class='sing' wx:for = "{{routearr}}" id ="{{item.id}}" bindtap = "singtap">
+      <image src = "https://track.huiur.com{{item.banner}}"></image>
+      <text class='tit'>{{item.title}}</text>
+      <!-- <view class='price'>
+        <text class='ico'>￥</text>
+        <text class='num'>{{item.price}}</text>
+      </view> -->
+    </view>
+    <!-- <view class='sing'>
+      <image src = "../../images/route01.png"></image>
+      <text class='tit'>东京富士山关西9日亲子之旅，迪士尼乐园圆梦，水陆两栖.动物游乐园</text>
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text class='num'>7398</text>
+      </view>
+    </view> -->
+  </view>
+</view>
+<!-- <view class='addbox' style='right:{{foright}}' catchtap='addprinttap'>
+  <image class='addfootprint' src = "../../images/intbtn.png"></image>
+  <view class='folef' catchtap='lefaddprint'></view>
+</view> -->

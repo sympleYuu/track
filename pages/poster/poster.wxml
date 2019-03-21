@@ -1,0 +1,11 @@
+<!--pages/poster/poster.wxml-->
+<view class='yellowbg'></view>
+<view class='posterbox'>
+  <text class='postertips'>保存您的足迹海报，
+分享到朋友圈给更多人观看~</text>
+<image class='posterpic' src = "{{postersrc}}"></image>
+</view>
+<view class='btnsbox'>
+  <view class='makebtn btnleft' bindtap='savepic'><text>保存到相册</text></view>
+  <view class='makebtn' bindtap='sharepic'><text>分享给好友</text></view>
+</view>

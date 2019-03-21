@@ -1,0 +1,44 @@
+<!--pages/routebook/routebook.wxml-->
+<view class='searchbar'>
+  <image class='ico' src = "../../images/searchico.png"></image>
+  <form bindsubmit="formSubmit">
+    <input name = "words" placeholder='搜索目的地'></input>
+    <button form-type="submit">
+      <image src = "../../images/sbtnbg.png"></image>
+      <text>搜 索</text>
+    </button>
+  </form>
+  
+</view>
+
+<view class='contbox none' wx:if = "{{routearr.length==0}}">
+  <image src = "../../images/searchnone.png"></image>
+  <text>抱歉，未搜索到相关内容</text>
+</view>
+<view class='contbox' wx:else>
+  <view class='sing'>
+    <image src = "../../images/routelittle01.png"></image>
+    <view class='textbox'>
+      <text class='tit'>日本旅游签证
+      【广州领区】
+      </text>
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text>138</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='sing'>
+    <image src = "../../images/routelittle02.png"></image>
+    <view class='textbox'>
+      <text class='tit'>东京富士山关西9日亲子之旅，迪士尼乐园圆梦，游玩睡水陆两栖河马巴士...</text>
+      <view class='price'>
+        <text class='ico'>￥</text>
+        <text>7398</text>
+      </view>
+      <view class='tagbox'>
+        <text class='gray'>9天8晚</text>
+      </view>
+    </view>
+  </view> -->
+</view>

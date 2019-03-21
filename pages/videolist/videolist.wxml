@@ -1,0 +1,18 @@
+<!--pages/videolist/videolist.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='photobox' wx:if = "{{photoshow}}">
+  <text class='title'>{{photolist[0].title}}</text>
+  <rich-text nodes="{{photolist[0].src}}"></rich-text>
+</view>
+<view wx:else>
+  <view class='videobox' wx:for = "{{videolist}}">
+    <view class='vedall'>
+      <video autoplay = "true" wx:if = "{{item.isplay}}" src = "{{item.src}}"></video>
+      <image src='{{item.banner}}' class='cover' wx:else></image>
+      <image wx:if = "{{item.isplay==false}}" src = "../../images/playbtn01.png" id = "{{item.id}}" bindtap='playvedtap' class='playbtn' ></image>
+    </view>
+    <text class='vedtit'>{{item.title}}</text>
+  </view>
+</view>

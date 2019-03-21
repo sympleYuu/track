@@ -1,0 +1,88 @@
+<!--pages/exitfoot/exitfoot.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='footbox'>
+  <view class='topbox'>
+    <input type = "text" placeholder='输入足迹名称……' placeholder-class='placeholder' value="{{localfoot.top.name}}" bindblur = "nameblur"></input>
+    <view class='coverbox' catchtap='uploadcover'>
+      <image mode="aspectFill" class = "cover" src = "{{coverimg}}"></image>
+      <image wx:if = "{{coverdef}}" class='upcoverbtn' src = "../../images/upcover.jpg"></image>
+      <image wx:else src = "../../images/delico.png" catchtap = "delcover" class='delcover'></image>    
+    </view>
+    
+  </view>
+  <!-- <view class='allexitbox'>
+    <view class='stationbox' wx:for = "{{localfoot.footarr}}" wx:for-item = "foitem" wx:for-index = 'staidx'>
+      <view class='addrbox'>
+        <image class='redpoint' src = "../../images/orpoint.png"></image>
+        <text class='stanum'>第{{capnum[staidx]}}站</text>
+        <view class='inputsta'>
+          <image class='localico' src = "../../images/localicon.png"></image>
+          <input type = "text" data-sid = "{{staidx}}" bindfocus = "posfocus" placeholder='请添加位置……' placeholder-class="{{foitem.warnfill?'red addplace':'addplace'}}" bindinput='bindKeyInput' bindblur = "placeblur" value='{{foitem.position}}'></input>
+           <view class='linkbox' wx:if = "{{foitem.linkshow}}">
+            <text wx:for = "{{sugData}}" wx:for-item = "textitem" data-place = "{{textitem.name}}" bindtap='chooseplace' data-sid = "{{staidx}}">{{textitem.name}}</text>
+           </view>
+        </view>
+        <view class='rigmenu' wx:if = "{{foitem.imgarr||foitem.vedsrc}}" bindtap='spotmenu' data-sid = "{{staidx}}">
+          <image class='operlist' src = "../../images/listico.png"></image>
+          
+        </view>
+        
+      </view>
+      <view class='stamain'>
+        <view class='stacontbox' >
+          <view class='imgsbox' wx:if = "{{foitem.imgarr&&foitem.imgarr.length>0}}">
+            <view class='sing' wx:for = "{{foitem.imgarr}}" wx:for-item = "imgitem" wx:for-index = "imgidx">
+              <image mode = "aspectFill" bindtap='previewimgs' data-img='{{imgitem}}' data-arr = "{{foitem.imgarr}}" src = "{{imgitem}}"></image>
+              <image class='delico' bindtap='delspotimg' data-nid = "{{imgidx}}" data-sid = "{{foitem.staid}}" src = "../../images/delico.png"></image>
+            </view>
+            <view class='addpic' wx:if = "{{foitem.imgarr.length<=5&&foitem.imgarr.vedsrc==undefined}}" data-sid = "{{foitem.staid}}" bindtap='addothers'>
+              <image mode = "aspectFill"  src = "../../images/addpic.png"></image>
+              
+            </view>
+          </view>
+          <view class='vedbox' wx:elif = "{{foitem.vedsrc}}">
+            <video src = "{{foitem.vedsrc}}"></video>
+          </view>
+          <view class='addpic' wx:else>
+              <image mode = "aspectFill" data-sid = "{{foitem.staid}}" bindtap='addall' src = "../../images/addpic.png"></image>
+             
+          </view>
+          
+          <view class='textbox' wx:if = "{{foitem.imgarr||foitem.vedsrc}}">
+            <textarea bindblur="textblur" data-sid = "{{foitem.staid}}" placeholder='说说当时的心情吧！' placeholder-class='textplace' maxlength = "-1">
+            </textarea>
+          </view>
+        </view>
+        
+      </view>
+      
+    </view>
+    <view class='addnext' wx:if = "{{localfoot.footarr[localfoot.footarr.length-1].imgarr||localfoot.footarr[localfoot.footarr.length-1].vedsrc}}">
+      <text bindtap="nextadd">添加下一站</text>
+    </view>
+    
+  </view> -->
+</view>
+<view class='orgbtn' bindtap='jumpstation'>
+  <image src='../../images/orgbtn.png'></image>
+  <text>添加站点</text>
+</view>
+<view class='suggest' bindtap='suggesttap'>遇到问题？</view>
+<!-- <view class='donebtn' bindtap='completetap'>
+  <text>完成制作</text>
+</view> -->
+<!-- <view class='mask' wx:if = "{{codeshow}}"></view>
+<view class='codeuptop' wx:if = "{{codeshow}}">
+  <image src = "../../images/uptopjf.png"></image>
+  <text class='tit'>制作足迹领取</text>
+  <text class='code'>10积分</text>
+  <view class='btn' bindtap='codeclosebtn'>
+    <image src = "../../images/jfuptopbtn.png"></image>
+    <text>我知道了</text>
+  </view>
+</view> -->
+<!-- <view class="{{upshow01?'uptop01 show01':'uptop01'}}">
+  <text>请先填写足迹名称 :)</text>
+</view> -->

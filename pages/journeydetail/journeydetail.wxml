@@ -1,0 +1,46 @@
+<!--pages/journeydetail/journeydetail.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='topbox'>
+  <image src = "https://track.huiur.com/{{banner}}" class='cover'></image>
+  <view class='days'>
+    <text>7</text>天
+  </view>
+  <button open-type='share' class='sharebtn'>
+    <image src = "../../images/shareico.png"></image>
+  </button>
+  <!-- <text class='retbtn' bindtap='jumpindex'>返回首页</text> -->
+</view>
+<view class='maininfo'>
+  <text class='tit'>{{title}}</text>
+  <text class='desc'>{{des}}</text>
+</view>
+<view class='graybar'></view>
+<view class='contbox'>
+  <view class='title'>
+    <image src = "../../images/titleico01.png"></image>
+    <text>行程概况</text>
+  </view>
+  <view class='con'>
+  <rich-text nodes = "{{content}}" class='p1'></rich-text>
+  </view>
+</view>
+<!-- <view class='graybar'></view>
+<view class='contbox'>
+  <view class='title'>
+    <image src = "../../images/titleico02.png"></image>
+    <text>行程概况</text>
+  </view>
+  <view class='con'>富文本编辑</view>
+</view> -->
+<view class='botbar'>
+  <!-- <view class='chat'>
+    <image src = "../../images/chatico.png"></image>
+  </view> -->
+  <view class='price'><text class='ico'>￥</text><text class='num'>{{price}}</text>起</view>
+  <view class='orbtn' bindtap='jumpindent'>
+    <image src = "../../images/orbtnbg.png"></image>
+    <text>提交意向</text>
+  </view>
+</view>

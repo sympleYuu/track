@@ -1,0 +1,184 @@
+/* pages/mall/mall.wxss */
+page{
+  background: #fafafa;
+}
+.swiperbox{
+  width: 730rpx;
+  height: 320rpx;
+  margin: 0 auto;
+  margin-top: 24rpx;
+}
+.swiperbox .slide-image{
+  width: 730rpx;
+  height: auto;
+}
+
+.kkarea{
+  margin-top: 35rpx;
+  padding: 0 35rpx;
+  padding-bottom: 10rpx;
+}
+.kkarea .sing image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.kkarea .sing{
+  float: left;
+  margin-right: 45rpx;
+  margin-bottom: 35rpx;
+  height: 140rpx;
+}
+.kkarea .sing:nth-of-type(5n){
+  margin-right: 0;
+}
+.kkarea .sing text{
+  font-size: 24rpx;
+  line-height: 26rpx;
+  color: #1f1607;
+  clear: both;
+  margin-top: 5rpx;
+  width: 100%;
+  text-align: center;
+}
+.kkarea::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.graybar{
+  width: 100%;
+  height: 16rpx;
+  background: #f2f1e9;
+}
+.placebox{
+  width: 100%;
+  height:auto;
+  padding-top: 35rpx;
+  box-sizing: border-box;
+  padding-left: 25rpx;
+}
+.titlebox{
+  position: relative;
+}
+.titlebox .h1{
+  font-size: 32rpx;
+  color: #1f1607;
+  line-height: 33rpx;
+}
+.titlebox .h2{
+  font-size: 24rpx;
+  line-height: 26rpx;
+  color: #aaa99e;
+  margin-top: 15rpx;
+}
+.arrrig{
+  position: absolute;
+  width: 14rpx;
+  height: 25rpx;
+  right: 37rpx;
+  top: 20rpx;
+}
+.scrollsing{
+  display: inline-block;
+  margin-right: 10rpx;
+  position: relative;
+}
+.placescroll{
+  white-space: nowrap;
+  width: 727rpx;
+  height: 200rpx;
+  margin-top: 24rpx;
+}
+.scrollsing image{
+  width: 218rpx;
+  height: 184rpx;
+}
+.scrollsing .h1{
+  position: absolute;
+  bottom: 58rpx;
+  left: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.scrollsing .h2{
+  position: absolute;
+  bottom: 35rpx;
+  left: 20rpx;
+  font-size: 20rpx;
+  color: #fff;
+}
+.routebox{
+  margin-top: 30rpx;
+  padding-left: 25rpx;
+  min-height: 1000rpx;
+  width: 702rpx;
+}
+.routebox .sing{
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #e8e7e0;
+}
+.routebox .sing image{
+  width: 702rpx;
+  height: 342rpx;
+  border-radius: 8rpx;
+}
+.routebox .sing text{
+  font-size: 28rpx;
+  line-height: 1.5;
+  margin-top: 10rpx;
+}
+.routebox .price::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.routebox .price text{
+  font-size: 36rpx;
+  color: #ff7f01;
+}
+.routebox .price text.ico{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.routebox .price text{
+  float: left;
+}
+.topimg{
+  width: 724rpx;
+  height: 260rpx;
+  margin: 0 auto;
+}
+.topimg image{
+  width: 100%;
+  height: 100%;
+}
+.makebtn{
+  position: fixed;
+}
+.addfootprint{
+  width: 237rpx;
+  height: 98rpx;
+}
+.addbox{
+  position: fixed;
+  right: -138rpx;
+  bottom: 200rpx;
+  width: 237rpx;
+  height: 98rpx;
+  z-index: 100;
+  transition: .2s all ease;
+}
+.folef{
+  position: absolute;
+  width: 100rpx;
+  height: 98rpx;
+  top: 0;
+  left: 0;
+}
+.topimg{
+  width: 702rpx;
+  height: 218rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}

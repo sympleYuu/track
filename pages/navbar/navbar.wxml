@@ -1,0 +1,14 @@
+<view class='spacebar' style='height:{{navH}}px'></view>
+<view class="navbar" style='height:{{navH}}px'>
+  <view class='capsulebox' wx:if = "{{shownav}}">
+    <view class='sing left' bindtap="navBack">
+      <image class='back' src = "../../images/capsuleback.png"></image>
+    </view>
+    <view class='sing right' bindtap="toIndex">
+      <image class='home' src = "../../images/capsulehome.png"></image>
+    </view>
+  </view>
+  <view class='navbar-title'>
+    {{pageName}}
+  </view>
+</view>

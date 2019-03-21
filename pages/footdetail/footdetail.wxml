@@ -1,0 +1,225 @@
+<!--pages/footdetail/footdetail.wxml-->
+<view class='main{{int}}'>
+<view class='topview{{int}}'>
+    <image class='topcover{{int}}' src = "{{cover}}"></image>
+    <navigator wx:if = "{{user_id==uid}}" class='fixbtn' url='../footfix/footfix?id={{fid}}'>
+      <image src = "../../images/exitbtn{{int}}.png" class='exitbtnimg{{int}}'></image>
+      <text class='exitbtntext{{int}}'>编辑</text>
+    </navigator>
+    <view class='fixbtn' wx:else bindtap='showModal'>
+      <image src = "../../images/jvbaobtn{{int}}.png" class='exitbtnimg{{int}}' ></image>
+      <text class='exitbtntext{{int}}'>举报</text>
+    </view>
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box{{int}}" wx:if="{{showModalStatus}}">
+      <text class='motitle{{int}}'>举报视频问题</text>
+      <view class='tipoff{{int}}' wx:for = "{{tipoffArr}}">
+        <image wx:if = '{{item.value == 0}}' class = "selectico{{int}}" src = "../../images/circle.png"></image>
+        <image wx:else class = "selectico{{int}}" src = "../../images/circleh.png"></image>
+        <text bindtap='tipofftap' data-next = "{{item.next}}"  id = "{{index}}" style="width:{{item.next==1?'590rpx':'620rpx'}}" class='tipstext{{int}}'>{{item.title}}</text>
+      </view>
+      <text class='donebtn{{int}}' bindtap='tipoffbtn'>完成</text>
+    </view>
+    <view animation="{{animationcomp}}" class="complaints_box{{int}}" wx:if="{{showcompStatus}}">
+        <text class='retbtn{{int}}' bindtap='returntap'>返回</text>
+        <text class='comptitle{{int}}'>我要吐槽</text>
+        <form bindsubmit = "submittap">
+           <textarea name = "comp" class='comptext{{int}}' auto-focus='true' bindinput="bindinput" placeholder='请具体说明问题，我们将尽快处理' placeholder-class='compholder{{int}}'></textarea>
+           <button class="subdone{{int}} {{active?'active':''}}" formType="submit">完成</button>
+        </form>
+    </view>
+    <view class='personalbox{{int}}'>
+      <image class='perphoto{{int}}' bindtap='jumpothers' src = "{{header}}" data-uid = "{{uid}}"></image>
+      <text class='pername{{int}}'>{{username}}</text>
+    </view>
+    <text class='maindesp{{int}}'>{{title}}</text>
+    <view wx:if = "{{user_id != uid}}">
+      <text wx:if = "{{isfans == 1}}" class='followedbtn{{int}}'>已关注</text>
+      <text wx:else class='followbtn{{int}}' bindtap='followtap'>+ 关注</text>
+    </view>
+    
+<text class='footdate{{int}}'>该足迹创建于{{date}}</text>   
+</view>          
+<view class='fodetlist_day{{int}}' wx:for = "{{footarr}}" wx:for-item = "day" wx:for-index = "dayidx">
+  <view class='nthtitle{{int}}'>
+    <text class='ntitle{{int}}'>第{{day.capnum}}天</text>
+    <!-- <image src = "../../images/nextbtn.png" class='nextbtn{{int}}'></image> -->
+  </view>
+  <!-- <image wx:if = "{{int==1}}" src = "../../images/lightline.png" class='lightline{{int}}'></image> 
+  <image wx:if = "{{int==2}}" src = "../../images/lightline2.png" class='lightline{{int}}'></image>  -->
+  <view class='stabox{{int}}' wx:for = "{{day.staarr}}" wx:for-item = "sta" wx:for-index = "staidx"> 
+    <view class='statitle{{int}}'>
+    
+      <!-- <image wx:if = "{{int == 1}}" class='statitico{{int}}' src = "../../images/numico.png"></image> -->
+      <!-- <image wx:else class='statitico{{int}}' src = "../../images/numico1.png"></image> -->
+      <text class='statittext{{int}}'>第 {{staidx+1}} 站-{{sta.position}}</text>
+    </view>
+    <view class='stasing{{int}}' wx:for = "{{sta.striparr}}" wx:for-item = "srp">
+      <view class='stacont{{int}}' wx:if = "{{srp.isvideo == 1}}">
+        <view class='staved{{int}}'>
+          <video class='stavedcover{{int}}' wx:if = "{{srp.playved}}" objectFit = "contain" src = "{{srp.media_url}}" autoplay='true'></video>
+          <image class='stavedcover{{int}}' wx:else mode = "aspectFill" src = "{{srp.videoimg_name}}" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" bindtap='stavedtap'></image>
+          <image class='stavedplaubtn' wx:if = "{{srp.playved == false}}" src = "../../images/playsbtn.png" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" bindtap='stavedtap'></image>
+      </view>
+      <!-- <text class='stavedtit{{int}}'>{{srp.title}}</text> -->
+       <view class='stanextbox{{int}}'>
+          <view class='quotebox{{int}}'>
+            <view class='quoreply{{int}}' data-media_id = "{{srp.media_id}}" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" bindtap='replytap'>
+              <text class='quotext{{int}}'>引用到回复</text>
+              <image class='replyico{{int}}' src='../../images/replyico.png'></image>
+            </view>
+            <view class='thumpbox{{int}}' data-isclick = "{{srp.is_click}}"  data-media_id = "{{srp.media_id}}" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" data-clicknum = "{{srp.clickNum}}" catchtap='thumpsingle'>
+              <text class='thumpnum{{int}}'>{{srp.clickNum}}</text>
+              <image class='thumpico{{int}}' wx:if = "{{srp.is_click == 1}}" src = "../../images/foot_thumph.png"></image>
+              <image class='thumpico{{int}}' wx:else src = "../../images/foot_thump.png"></image>
+            </view>
+          </view>
+          <text class='tasays{{int}}'>TA说：</text>
+          <text class='stavedtit{{int}}' style="font-style: {{srp.defalt == 1?'italic':'normal'}}">{{srp.title}}</text>
+        </view>       
+      </view> 
+      
+      <view class='stacont{{int}}' wx:else>
+        <view class='stapics{{int}}{{srp.media_url.length}} stapic_clear'>
+          <image class='stavedimg{{int}}{{srp.media_url.length}}' wx:for = "{{srp.media_url}}" wx:for-item = "img" wx:for-index = "imgidx" src = "{{img}}?imageView2/1/w/344/h/194/interlace/1" mode='aspectFill' bindtap='previewimg' data-idx = "{{imgidx}}" data-imgarr = "{{srp.media_url}}"></image>
+        </view>
+         <view class='stanextbox{{int}}'>
+          <view class='quotebox{{int}}'>
+            <view class='quoreply{{int}}' data-media_id = "{{srp.media_id}}" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" bindtap='replytap' >
+              <text class='quotext{{int}}'>引用到回复</text>
+              <image class='replyico{{int}}' src='../../images/replyico.png'></image>
+            </view>
+            <view class='thumpbox{{int}}' data-isclick = "{{srp.is_click}}"  data-media_id = "{{srp.media_id}}" data-dayid = "{{day.dayid}}" data-staid = "{{sta.staid}}" data-srpid = "{{srp.srpid}}" data-clicknum = "{{srp.clickNum}}" catchtap='thumpsingle'>
+              <text class='thumpnum{{int}}'>{{srp.clickNum}}</text>
+              <image class='thumpico{{int}}' wx:if = "{{srp.is_click==1}}" src = "../../images/foot_thumph.png"></image>
+              <image class='thumpico{{int}}' wx:else src = "../../images/foot_thump.png"></image>
+            </view>
+          </view>
+          <text class='stavedtit{{int}}' style="font-style: {{srp.defalt == 1?'italic':'normal'}}">{{srp.title}}</text>
+          <!-- <text class='stavedtit{{int}}'>{{srp.title}}</text> -->
+          <text class='tasays{{int}}'>TA说：</text>
+        </view> 
+      </view> 
+       
+    </view>
+    
+  </view>
+</view> 
+<!-- <view class='actbox{{int}}' >
+  <text class='evamaintit{{int}}'>点我评价一下！</text>
+  <view class='evabox{{int}}' wx:if = "{{int == 1}}">
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '1'>
+        <image wx:if = "{{evah01}}" class = "evaimg{{int}}_01" src = "../../images/footeva011.png"></image>
+        <image wx:else class = "evaimg{{int}}_01" src = "../../images/footeva01h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最走心</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[0].percent}}</view>
+      </view> 
+    </view> 
+    <view class='littleline{{int}}'></view>
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '2'>
+        <image wx:if = "{{evah02}}" class = "evaimg{{int}}_02" src = "../../images/footeva012.png"></image>
+        <image wx:else class = "evaimg{{int}}_02" src = "../../images/footeva02h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最具创意</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[1].percent}}</view>
+      </view> 
+    </view> 
+    <view class='littleline'></view>
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '3'>
+        <image wx:if = "{{evah03}}" class = "evaimg{{int}}_03" src = "../../images/footeva013.png"></image>
+        <image wx:else class = "evaimg{{int}}_03" src = "../../images/footeva03h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最有价值</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[2].percent}}</view>
+      </view> 
+    </view> 
+   
+  </view>
+
+  <view class='evabox{{int}}' wx:else>
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '1'>
+        <image wx:if = "{{evah01}}" class = "evaimg{{int}}_01" src = "../../images/footeva021.png"></image>
+        <image wx:else class = "evaimg{{int}}_01" src = "../../images/footeva01h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最走心</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[0].percent}}</view>
+      </view> 
+    </view> 
+    <view class='littleline{{int}}'></view>
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '2'>
+        <image wx:if = "{{evah02}}" class = "evaimg{{int}}_02" src = "../../images/footeva022.png"></image>
+        <image wx:else class = "evaimg{{int}}_02" src = "../../images/footeva02h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最具创意</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[1].percent}}</view>
+      </view> 
+    </view> 
+    <view class='littleline{{int}}'></view>
+    <view class='evaeve{{int}}'>
+      <view class="evasing{{int}}" bindtap='selecteva' data-lid = '3'>
+        <image wx:if = "{{evah03}}" class = "evaimg{{int}}_03" src = "../../images/footeva023.png"></image>
+        <image wx:else class = "evaimg{{int}}_03" src = "../../images/footeva03h.png"></image>
+      </view>
+      <text class='labtitle{{int}}'>最有价值</text>
+      <view class='evabarbox{{int}}'>
+        <view class='evanum{{int}}'>{{aessarr[2].percent}}</view>
+      </view> 
+    </view> 
+         
+  </view>
+</view> -->
+<!-- <button class='bottomshare{{int}}' open-type = "share">分享给你的小伙伴吧！</button> -->
+</view>
+
+
+
+<!-- </view> -->
+<view class='bottombar{{int}}'>
+  <view class='botting{{int}}' catchtap='totalfootclick' data-click = "{{botarr.is_clicks}}" data-clicknum = "{{botarr.totalClickNum}}">
+    <image class='botico01{{int}}' src = "../../images/bottomico01.png"></image>
+    <text class='bottext01{{int}}'>{{botarr.totalClickNum}}</text>
+  </view>
+  <view class='bottomline{{int}}'></view>
+  <view class='botting{{int}} botview02{{int}}' bindtap='jumpreply'>    
+    <image class='botico02{{int}}' src = "../../images/botreplyico0{{int}}.png"></image>
+    <text wx:if = "{{botarr.totalCommentNum > 0}}" class='botrepnum'>{{botarr.totalCommentNum}}</text>
+    <text class='bottext02{{int}}'>回复</text>
+  </view>
+  <view class='bottomline{{int}}'></view>
+  <view class='botting{{int}} botview03{{int}}' catchtap='collectfoot' data-collect = "{{botarr.is_collections}}">
+    <image wx:if = "{{botarr.is_collections == 1}}" class='botico03{{int}}' src = "../../images/botcollectico0{{int}}h.png"></image>
+    <image wx:else class='botico03{{int}}' src = "../../images/botcollectico0{{int}}.png"></image>
+    
+    <text class='bottext02{{int}}'>收藏</text>
+  </view>
+  <view class='bottomline{{int}}'></view>
+  <button class='botting{{int}} botview03{{int}}' open-type = "share">
+    <image class='botico04{{int}}' src = "../../images/botshareico0{{int}}.png"></image>
+    <text class='bottext02{{int}}'>分享</text>
+  </button>
+</view> 
+<view class='foottips' wx:if = "{{foottips}}">一篇足记只能赞一次</view>
+<!-- <view class='replybox{{int}}' >
+   <form bindsubmit="singlereply">
+    <textarea name = "areatext" class='replyarea{{int}}' placeholder-class="holder{{int}}" placeholder='点击输入评论内容...' auto-focus='{{autofocus}}'></textarea>
+    <button formType="submit" class='replybtn{{int}}'>完成</button>
+  </form> 
+  
+  <view class='closemask' bindtap='closemask'></view> 
+</view> -->
+<view class='downreply' wx:if = "{{replybox}}">
+  <form>
+    <input name = "areatext" class='replyarea{{int}}' placeholder-class="holder{{int}}" placeholder='点击输入评论内容...' auto-focus='true' confirm-type = "done" bindconfirm = "singlereply"></input>
+  </form>   
+</view>

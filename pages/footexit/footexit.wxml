@@ -1,0 +1,155 @@
+<!--pages/footexit/footexit.wxml-->
+<view class='mainbox{{int}}' style="min-height:{{winheight}}px">
+   <view class='topviewbox{{int}}'>
+    <image class='topcover{{int}}' src = "{{coverimg}}"></image>
+    <scroll-view class='typearr{{int}}' scroll-x = "true">
+      <view class='covertype{{int}}' wx:for = "{{coverarr}}" wx:for-index="idx" bindtap='covertap' id = "{{idx}}" style = "">
+        <image class='coverimg{{int}}' mode = "aspectFill" src = "{{item}}"></image>
+      </view>
+    </scroll-view>
+    <view class='userbox{{int}}'>
+      <image class='userphoto{{int}}' src = "{{myphoto}}"></image>
+      <text class='username{{int}}'>{{myname}}</text>
+      <view class='textareabox{{int}}'>
+        <textarea wx:if = "{{areashow}}" class='maindesp{{int}}' bindinput = "textinput" placeholder='请输入标题…' maxlength = "30" bindblur = "fixtitle" value='{{titlevalue}}'></textarea>
+      </view>
+    </view>
+  </view>            
+
+  <view class='daybox{{int}}'>
+    <view class='daytitlebox{{int}}' id = "dayint1" wx:for = "{{totalarr}}" wx:for-item = "day" wx:for-index = "dayidx">
+      <text class='daytit{{int}}'>第{{day.capnum}}天</text>
+      <view class='cutaddbtn{{int}}' wx:if = "{{totalarr.length-1 > dayidx}}" >
+        <text wx:if = "{{day.insert}}" data-bid = "{{day.dayid}}" catchtap = "cutadddone">完成</text>
+        <text wx:else data-bid = "{{day.dayid}}" catchtap = "cutaddtap">插入</text>
+      </view> 
+      <view class='stabox{{int}}' wx:for = "{{day.staarr}}" wx:for-item = "sta">
+        <view class='statitlebox{{int}}'>
+          <text class='stanum{{int}}'>「第{{sta.capnum}}站」</text>
+          <view class='inptextbox'>
+            <input class='statext{{int}}' type='text' placeholder-class='staplace{{int}}' placeholder='请添加目的地...' maxlength = "20" bindinput = "positioninp" bindblur = "positionblur" id = "{{sta.staid}}" value='{{sta.position}}' disabled='{{sta.disabled}}' data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}"></input>
+            <scroll-view class='linkwords{{int}}' scroll-y = "true"  wx:if = "{{sta.linkhid}}">
+              <text wx:for = "{{linkarr}}" class='linktips{{int}}' data-name = "{{item}}" catchtap='selectwords' data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}">{{item}}</text>            
+            </scroll-view>
+          </view>
+          
+        </view>
+        <view class='addlist{{int}}' wx:if = "{{sta.listshow}}" animation = "{{listanimat}}">
+          <text class='addlistsing{{int}}' catchtap='addcutpic' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}">照片</text>
+          <text class='addlistsing{{int}}' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" catchtap='addcutved'>视频</text>
+          <text class='addcancel{{int}}' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" catchtap='addcutcel'>取消</text>
+        </view>
+        <view wx:for = "{{sta.striparr}}" wx:for-item = "srp">
+
+          <view class='picsbox{{int}}'>
+            <view class='stacont{{int}}'>
+              <view class='stapics{{int}}{{srp.imgarr.length}}' wx:if = "{{srp.isvideo == 2}}">
+                <view class='imgbox{{int}}{{srp.imgarr.length}}' wx:for = "{{srp.imgarr}}" wx:for-item = "img" wx:for-index = "imgidx">
+                  <image class='stavedimg{{int}}{{srp.imgarr.length}}' src = "{{img}}" mode='aspectFill'></image>
+                  <image class='deleteimg{{int}}' data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}" data-srp = "{{srp.c_pos}}" data-imgidx = "{{imgidx}}" catchtap='deleteimg' wx:if = "{{srp.keep==0}}" src = "../../images/delete.png"></image>
+                </view>
+              </view>
+              <view class='staved{{int}}' wx:else>
+                <video class='stavedcover{{int}}' wx:if = "{{vedshow}}" objectFit = "contain" src = "{{srp.vedsrc}}">
+                  <cover-image class= "deleteved{{int}}" data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}" data-srp = "{{srp.c_pos}}" catchtap='deleteved' wx:if = "{{srp.keep==0}}" src = "../../images/delete.png"></cover-image>
+                </video>
+              </view>
+              <view class='statitbox{{int}}' wx:if = "{{srp.titlebox}}">
+                <!-- <text class='stavedtit{{int}}' wx:if='{{statithid}}'>请输入标题…</text> -->
+                <form bindsubmit = "formsub" data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}" data-srp = "{{srp.c_pos}}" class='subform'>
+                  <view wx:if = "{{srp.keep==1}}" class='srptextarea{{int}}'>{{srp.title}}</view>
+                  <textarea wx:else class='statitinp{{int}}' name="title" bindinput = "stainput" placeholder='请输入标题..' maxlength = "150" value='{{srp.value}}'></textarea>
+                  
+                  <button wx:if = "{{srp.keep == 1}}" class='statrue{{int}}' data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}" data-srp = "{{srp.c_pos}}" bindtap="fixsub" hover-class = "hoverbtn">修改</button>
+                  <button wx:else class='statrue{{int}}' hover-class = "hoverbtn{{int}}" formType="submit" data-day = "{{day.dayid}}" data-sta = "{{sta.staid}}" data-srp = "{{srp.c_pos}}" >确定</button>
+                  
+                </form>
+                
+              </view> 
+              <text class='stanumber{{int}}'>{{srp.srpnum}}</text>           
+            </view>
+             
+          </view>
+        
+      </view>
+      <!-- 每站是否显示插入的模块 -->
+      <view class='staadd{{int}}' wx:if = "{{sta.cutadd == 1}}">
+      <!-- wx:if = "{{sta.cutadd == 1}}" -->
+        <image class='addico{{int}}' bindtap='cutaddfoot' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}"  src = "../../images/staadd.png"></image>
+        <view class='thenaddboxc{{int}}' wx:if = "{{sta.spreadsta == 1}}">
+            <text class='then1{{int}}' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" bindtap='continueaddcut'>继续本站</text>
+            <view class='thenline{{int}}'></view>
+            
+            <text class='then2{{int}}' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" bindtap='continuenextsta'>开始下一站</text>
+        </view>
+        <text class='addtext{{int}}' wx:else style="color:{{addwarn?'#870000':'#666'}}">继续添加你的足迹吧</text> 
+        </view>
+      <view class='staadd{{int}}' wx:elif = "{{sta.cutadd == 2}}">
+          <image class='addico{{int}}'  bindtap='addfootcut' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" src = "../../images/staadd.png"></image>
+          <text class='addtext{{int}}'  style="color:#666">点它开始添加你的足迹吧！</text>
+      </view>
+      <view class='staadd{{int}}' wx:elif = "{{sta.cutadd == 3}}">
+          <image class='addico{{int}}'  bindtap='addfootcut' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}" src = "../../images/staadd.png"></image>
+          <text class='addtext{{int}}' style="color:#870000">请先填写地理位置</text>
+      </view>
+        <!-- 插入弹出的选择照片和视频 -->
+        
+      
+      </view> 
+    </view>
+  </view>
+  <view class='staadd{{int}}' wx:if = "{{firstadd}}">
+          <image class='addico{{int}}' bindtap='addfoot' src = "../../images/staadd.png"></image>
+          <text class='addtext{{int}}' style="color:{{addwarn?'#870000':'#666'}}">{{addtext}}</text>
+  </view>
+  <view class='staadd{{int}}' wx:if = "{{thenadd}}">
+     <image class='addico{{int}}' bindtap='addthenfoot' src = "../../images/staadd.png" wx:if = "{{spreadsta==false}}"></image>
+     <view class='thenaddbox{{int}}' wx:if = "{{spreadsta}}">
+      <image class='addico{{int}}' bindtap='continueadd' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}"  src = "../../images/staadd.png"></image>
+        <text class='then1{{int}}'  bindtap='continueadd'>继续本站</text>
+        <!-- <view class='thenline{{int}}'></view> -->
+        <image class='addico{{int}}' bindtap='nextsta' data-did = "{{day.dayid}}" data-aid = "{{sta.staid}}"  src = "../../images/staadd.png"></image>
+        <text class='then2{{int}}' bindtap='nextsta'>开始下一站</text>
+        <!-- <view class='thenline2{{int}}'></view> -->
+        <!-- <text class='then2{{int}}' bindtap='nextday'>进入下一天</text> -->
+     </view>
+     <text class='addtext{{int}}' wx:else style="color:{{addwarn?'#870000':'#666'}}">继续添加你的足迹吧</text> 
+  </view>
+  <view style='height:500rpx;width:100%'></view> 
+</view>
+
+<view class='bottombar{{int}}'>
+  <!-- 可用 -->
+  <view class='recall{{int}}' wx:if = "{{recall}}" bindtap='recalltap'>
+    <image class='recallico{{int}}' src = "../../images/recallico1.png"></image>
+    <text class='recalltext1{{int}}'>撤回</text>
+  </view>
+  <!-- 不可用 -->
+  <view class='recall{{int}}' wx:else>
+    <image class='recallico{{int}}' src = "../../images/recallico2.png"></image>
+    <text class='recalltext2{{int}}'>撤回</text>
+  </view>
+  <view class='donebtn{{int}}' catchtap='compeletetap'>
+    <text class='donetext'>完成制作</text>
+  </view>
+</view>
+<view class='mask{{int}}' hidden='true'></view>
+
+<view class='addlist{{int}}' wx:if = "{{listhidden}}" animation = "{{listanimat}}">
+  <text class='addlistsing{{int}}' catchtap='addpic'>照片</text>
+  <text class='addlistsing{{int}}' catchtap='addved'>视频</text>
+  <text class='addcancel{{int}}' catchtap='addcel'>取消</text>
+</view>
+
+<!-- 输入联想取消下拉的蒙版 -->
+<view class='linkmask{{int}}' wx:if = "{{linkhid}}" bindtap='linkmasktap'>
+</view>
+<view class='continmask{{int}}' wx:if = "{{contiques}}"></view>
+<view class='continueup{{int}}' wx:if = "{{contiques}}">
+  <text class='contque{{int}}'>是否继续上次未完成的编辑？</text>
+  <view class='contansw{{int}}'>
+    <text class='answ_yes{{int}}' bindtap='continueyes'>是</text>
+    <text class='answ_no{{int}}' bindtap='continueno'>否</text>
+  </view>
+</view>
+

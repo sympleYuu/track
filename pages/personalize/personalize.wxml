@@ -1,0 +1,66 @@
+<!--pages/intform/intform.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<form bindsubmit='formsubmit'>
+  <view class='formbox'>
+  <view class='sing'>
+      <text class='tit imp'>目的城市</text>
+      <input type='text' name = "destination" placeholder='请输入'></input>
+    </view>
+    <view class='sing'>
+      <text class='tit imp'>出发城市</text>
+      <picker bindchange="bindPickerChange" mode = "region">
+          <image class='arrrig' src = "../../images/arrrig.png"></image>
+          <text class='place'>{{city}}</text>
+      </picker>
+    </view>
+    <view class='sing'>
+      <text class='tit imp'>出发时间</text>
+      <view class='timebox'>
+        <picker class='timepicker01' bindchange = 'timechange01' start = "{{today}}" mode = "date"><text class='choose01'>{{gotime01}}</text></picker>
+        
+        <text class='line'>——</text>
+        <picker class='timepicker01' bindchange = 'timechange02' start = "{{starttime02}}" mode = "date"><text>{{gotime02}}</text></picker>
+      </view>
+    </view>
+    <view class='graybar'></view>
+    <view class='sing'>
+      <text class='tit imp'>出发人数</text>
+      <view class='numbox'>
+        <image bindtap='minusnum' wx:if = "{{num>1}}" src = "../../images/minush.png"></image>
+        <image wx:else src = "../../images/minus.png"></image>
+        <text>{{num}}</text>
+        <image bindtap='addnum' wx:if = "{{num<9}}" src = "../../images/addh.png"></image>
+        <image wx:else src = "../../images/add.png"></image>
+      </view>
+    </view>
+    <view class='sing'>
+      <text class='tit imp'>人均预算</text>
+      <input type='number' maxlength = "10" name = "money" placeholder='请输入人均预算'></input>
+    </view>
+    <view class='graybar'></view>
+    <view class='sing'>
+      <text class='tit imp'>联系人</text>
+      <input type='text' name = "people" placeholder='请输入联系人'></input>
+    </view>
+    <view class='sing'>
+      <text class='tit imp'>联系方式</text>
+      <input type='number' maxlength = "11" name = "tell" placeholder='请输入联系方式'></input>
+    </view>
+    <view class='graybar'></view>
+    <view class='note'>
+      <text>备注</text>
+      <textarea name = "des" placeholder='请将您的需求告诉我们'></textarea>
+    </view>
+    <button class='subbtn' form-type = "submit">提交意向</button>
+  </view>
+</form>
+<view class='mask' bindtap='suretap' wx:if = "{{tipsshow}}"></view>
+<view class='uptop' wx:if = "{{tipsshow}}">
+  <view class='tips'>
+    <image src = "../../images/warning.png"></image>
+    <text class='title'>{{tips}}</text>
+  </view>
+  <text class='sure' bindtap='suretap'>确定</text>
+</view>

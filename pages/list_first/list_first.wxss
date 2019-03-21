@@ -1,0 +1,298 @@
+/* pages/list_first/list_first.wxss */
+.vl-person{
+  position: relative;
+}
+.vl-person{
+  width: 100%;
+  height: 134rpx;
+}
+.vl-porbox{
+  width: 85rpx;
+  height: 85rpx;
+  overflow: hidden;
+  padding:30rpx 28rpx 0 30rpx;
+  float: left;
+}
+.vl-portrait{
+  width: 85rpx;
+  height: 85rpx;  
+  border-radius: 50%; 
+}
+.vl-username{
+  /* float: left; */
+  font-size: 32rpx;
+  color: #000;
+  line-height: 40rpx;
+  display: block;
+  padding-top: 16rpx;
+  padding-bottom: 7rpx;
+  width: 215rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.vid-veo{
+  width: 686rpx;
+  height: 386rpx;
+  margin:0 auto;
+  position: relative;
+  box-shadow: 0 4rpx 15rpx rgba(174,156,136,.48);
+  border-radius: 8rpx;
+}
+.vlistbox{
+  margin-top: 32rpx;
+}
+.vidplayer{
+  width: 100%;
+  height: 386rpx;
+}
+.vl-textcon::after{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.vl-vdtitle{
+  display: block;
+  font-size: 42rpx;
+  color: #fff;
+  width: 500rpx;
+  /* margin:0 auto; */
+  text-align: left;
+  /* padding-top: 28rpx; */
+  /* float: left; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 20rpx;
+  left: 24rpx;
+  z-index: 30;
+  letter-spacing: 3rpx;
+}
+.vl-thumpimg{
+  width:30rpx;
+  height: 31rpx;
+  float: left;
+  padding-right: 15rpx;
+}
+.vl-thumpimg.thumph{
+  width: 34rpx;
+  height: 35rpx;
+}
+.vl-thumpnum{
+  font-size: 28rpx;
+  color: #999;
+  line-height: 35rpx;
+  float:left;
+}
+.vl-oper{
+  float: right;
+  padding-top: 35rpx;
+  margin-top: 40rpx;
+}
+.vl-oper::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.vl-thump{
+  float: left;
+  margin-right: 32rpx;
+  position: relative;
+  height: 35rpx;
+}
+.vl-thump::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.vl-commimg{
+  width:39rpx;
+  height: 29rpx;
+  float: left;
+  padding-right: 15rpx;
+  margin-top: 3rpx;
+}
+.vl-commnum{
+  font-size: 28rpx;
+  color: #999;
+  line-height: 35rpx;
+  float:left;
+}
+.vl-comm{
+  float: left;
+  margin-right: 30rpx;
+  position: relative;
+  height: 35rpx;
+}
+.vl-share{
+  float:left;
+  position: relative;
+  margin:0;
+  padding: 0;
+  background-color: transparent;
+  padding-right: 50rpx;
+  border:0px solid rgba(0, 0, 0, 0);
+  margin-top: 3rpx;
+}
+.vl-share::after{
+  display: none;
+}
+.vl-shareimg{
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+}
+.vl-textcon::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.vdcover{ 
+  width: 100%;
+  height: 100%;
+}
+.vdcoverimg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+.pause{
+  width: 49rpx;
+  height: 51rpx;
+  position: absolute;
+  z-index: 333;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: -25rpx;
+}
+.play,.pause,.time {
+  /* flex: 1;
+  height: 100%; */
+}
+.time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  line-height: 50rpx;
+}
+.img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx auto;
+  position: absolute;
+}
+.vedpause{
+  position: absolute;
+  width: 49rpx;
+  height: 57rpx;
+  top:50%;
+  left: 50%;
+  margin-left: -24.5rpx;
+  margin-top: -28.5rpx;
+}
+.vdcoverimg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  border-radius: 8rpx;
+}
+.briefbox{
+  width: 100%;
+  height: 338rpx;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 35rpx;
+}
+.bimg{
+  position: absolute;
+  width: 105%;
+  height: 350rpx;
+  top: 0;
+  left: 0;
+  -webkit-filter:blur(3px);
+}
+.btitle{
+  width: 100%;
+  position: absolute;
+  top: 65rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: left;
+}
+.btext{
+  text-align: left;
+  width: 680rpx;
+  left: 50%;
+  margin-left: -340rpx;
+  position: absolute;
+  line-height: 38rpx;
+  font-size: 24rpx;
+  color: #fff;
+  top: 125rpx;
+}
+.playbtn{
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -44rpx;
+  margin-top: -42rpx;
+}
+.vl-textcon{
+  height: 128rpx;
+  position: relative;
+}
+.timebox{
+  /* padding-left: 38rpx; */
+  float: left;
+  padding-top: 20rpx;
+}
+.vl-time{
+  font-size: 28rpx;
+  color: #999;
+  line-height: 30rpx;
+}
+.vl-distance{
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 28rpx;
+  position: absolute;
+  z-index: 30;
+  top: 82rpx;
+  left: 28rpx;
+}
+.viewbar{
+  position: absolute;
+  top: 23rpx;
+  right: 18rpx;
+  z-index: 30rpx;
+}
+.viewbar image{
+  width: 29rpx;
+  height: 16rpx;
+  float: left;
+  margin-top: 5rpx;
+}
+.viewbar text{
+  font-size: 24rpx;
+  float: left;
+  color: #fff;
+  margin-left: 8rpx;
+  line-height: 26rpx;
+
+}

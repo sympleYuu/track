@@ -1,0 +1,8 @@
+<!--pages/canvus/canvus.wxml-->
+<view class='view-page'>
+  <navbar page-name="{{pagetitle}}"></navbar>
+</view>
+<view class='canvusbox'>
+  <canvas style="width: {{screenWidth}}px; height: {{canvus_h}}px;" canvas-id = "canvid"></canvas>
+
+</view>

@@ -1,0 +1,197 @@
+<!--pages/footprint/footprint.wxml-->
+<view class='yelbox'></view>
+<view class='mytopbox'>
+  <image class='myphoto' src = "{{myheader}}"></image>
+  
+  <text class='myusername'>{{myname}}</text>
+  <image src = "../../images/icomale.png" wx:if = "{{sex==1}}" class='sexico'></image>
+  <image src = "../../images/icofemale.png" wx:else class='sexico'></image> 
+  <text class='myfootnum'>作品：{{footnum}}</text>
+</view>
+<view class='pagetitle' animation = "{{titleanimation}}">
+ 
+  <!-- <view class='mytitbox' wx:if = "{{footexta}}">
+    <image wx:if = "{{ptab==1}}" class='footpico02' src = "../../images/footpico02h.png"></image>
+    <image wx:else class='footpico02' src = "../../images/footpico02.png"></image>
+    <text class='ptitle' style="color:{{ptab==1?'#000':'#777'}}" bindtap='footmytap'>我的足迹</text>
+    <view wx:if = "{{ptab==1}}" class='botline'></view>
+  </view>  -->
+  <image class='makebtn' bindtap='jumpexit' src = "../../images/addfootico.png"></image>
+  <text class='startmake'>开始制作足迹</text>
+</view>
+<view class='footcontainer'>
+  <text class='titleh1'>我的足迹</text>
+  <view class='footnonebox'  wx:if = "{{myfootarr.length==0}}">
+    <image src = "https://youyue.huiur.com/fe_images/footnonebg.jpg"></image>
+     <text>只想要记住这永恒的瞬间 
+这刹那过后世界只是回忆的沙漏！
+
+快来
+创建你的第一条足迹吧！</text>
+  </view>
+  <view class='myfootlist' wx:else>
+        <view class='startpoint'></view>
+        <view class='myfobox' wx:for = "{{myfootarr}}" id = "{{item.id}}" catchtap='myfootjump'>
+          <view class='activepoint'></view>
+          <view class='mycoverbox'>
+            <image class='mycoverimg' mode = "aspectFill" src = "{{item.s_img}}"></image>
+            <view class='shadebox'></view>
+            <text class='myfotit'>{{item.title}}</text>
+            <text class='myfodate'>{{item.createtime}}</text>
+            <!-- <text class='myviewnum'>{{item.play_count}}次浏览</text> -->
+           <button class='myfoshare' open-type = "share" catchtap='jumpfalse' data-fid = "{{item.id}}" data-uid = "{{item.user_id}}" data-title = "{{item.title}}" data-img = "{{item.s_img}}">
+           <image class='myfoshareimg' src = "../../images/sharefootico.png"></image>
+           <text>分享</text>
+           </button> 
+           
+            <view class='morebtn' catchtap = "morebtntap" data-fid = "{{item.id}}">
+            <image src = "../../images/moreico.png"></image>
+            </view>
+          </view>
+          <view class='mylocalbox'>
+            <text class='myloctit'>足迹位置</text>
+            <text class='mylocaltext'>{{item.pos}}</text>
+          </view>
+        </view>
+      </view>
+</view>
+<!-- <view class='containerbox'>
+    <view class='foothotbox' wx:if = "{{ptab==0}}">
+      <view class='footlist'>
+        <view class='hotfobox' wx:for="{{hotarr}}" data-hid='{{item.id}}' catchtap='hotdetjump'>
+          <view class='hotcover'>
+            
+            <image class = "hotcoverimg" mode = "aspectFill" src = "{{item.s_img}}"></image>
+            <view class='shadebox'></view>
+            <text class='hotpara'>{{item.title}}</text>
+            <text class='hotdate'>{{item.create_time}}</text>
+            <view class='hotbottom'>
+              <image class='hotphoto' data-uid='{{item.user_id}}' catchtap='jumpothers' src = "{{item.header}}"></image>
+              <text class='hotuser'>BY {{item.user_nickname}}</text>
+              <text class='hotview'>{{item.play_count}}次浏览</text>
+            </view>
+           
+            <button class='myfoshare' open-type = "share" catchtap='jumpfalse' data-fid = "{{item.id}}" data-uid = "{{item.user_id}}" data-title = "{{item.title}}">
+              <image class='myfoshareimg' src = "../../images/foothotshare.png"></image>
+            </button>
+          </view>
+          <view class='hotfootlocal'>
+            <text class='hotlocaltit'>足迹位置</text>
+            <view class='hotlocallist'>{{item.pos}}</view>
+          </view>
+        </view>
+      </view>
+      
+      <image hidden='{{timghid}}' class='timg' src = "../../images/timg.gif"></image>
+    </view>
+    <view class='footmybox' wx:else>
+      
+      <view class='nonebox' wx:if = "{{mydefault}}">
+        <text class='deftext'>你还没有生成足迹，快去制作一个吧！</text>
+      </view>
+      <view class='myfootlist' wx:else>
+        <view class='startpoint'></view>
+        <view class='myfobox' wx:for = "{{myfootarr}}" id = "{{item.id}}" catchtap='myfootjump'>
+          <view class='activepoint'></view>
+          <view class='mycoverbox'>
+            <image class='mycoverimg' mode = "aspectFill" src = "{{item.s_img}}"></image>
+            <view class='shadebox'></view>
+            <text class='myfotit'>{{item.title}}</text>
+            <text class='myfodate'>{{item.createtime}}</text>
+            <text class='myviewnum'>{{item.play_count}}次浏览</text>
+           
+            <view class='detelebtn' catchtap = "deltap" data-fid = "{{item.id}}">删除</view>
+          </view>
+          <view class='mylocalbox'>
+            <text class='myloctit'>足迹位置</text>
+            <text class='mylocaltext'>{{item.pos}}</text>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+  
+</view> -->
+<!-- <view class='bulidbox' wx:if = "{{footexta}}">
+  <view bindtap='jumpindex' class='indexbox'>
+    探索周边
+  </view>
+  <view class='hight'></view>
+  <view class='makebox' bindtap='jumpexit'>
+    <image src = "../../images/makebtn.png" class='footmakebtn'></image>
+    <text class='bulidtext'>开始制作足迹</text>
+  </view>  
+</view> -->
+
+<!-- 上传成功 -->
+<view class='uptopmask' bindtap='upmasktap' wx:if = "{{uptopmask}}"></view>
+<view class='uptop_01' wx:if = "{{uptopshow1}}">
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score1'>成功上传足迹</text>
+  <text class='up_view02' style='margin-top:60rpx' bindtap='upmasktap' wx:if = "{{uptopmask}}">好的</text>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+</view>
+<image class='uptopclose' wx:if = "{{uptopshow1}}" src = "../../images/closebtn.png" bindtap='upmasktap'></image>  
+<!-- 上传后升级 -->
+<view class='uptop_01' wx:if = "{{uptopshow2}}">
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score'>成功上传足迹，获得 <text class='yellownum'>{{score}}</text> 积分</text>
+  <text class='up_text02'>恭喜您成功升到　　　级</text>
+  <navigator url='../levels/levels' class='up_view02'>点击查看详情</navigator>
+  <image class='uptopcup' src = "../../images/uptopcup.png"></image>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+  <text class='up_num01'>{{grade}}</text>
+</view>
+<image class='uptopclose' wx:if = "{{uptopshow2}}" src = "../../images/closebtn.png" bindtap='upmasktap' ></image>   
+
+<!-- 上传后升级并获得称号 -->
+
+<view class='uptop_03' wx:if = "{{uptopshow3}}">
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score'>成功上传足迹，获得 <text class='yellownum'>{{score}}</text> 积分</text>
+  <text class='up_text02'>恭喜您成功升到　　　级</text>
+  <text class='up_sign02'>解锁　　　　　　　称号</text>
+  <navigator url='../levels/levels' class='up_view02'>点击查看详情</navigator>
+  <image class='uptopcup2' src = "../../images/uptopcup.png"></image>
+  <image class='upsign012' mode = "aspectFill" src = "{{name}}"></image>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+  <text class='up_num012'>{{grade}}</text>
+</view>
+<image class='uptopclose1' wx:if = "{{uptopshow3}}" src = "../../images/closebtn.png" bindtap='upmasktap'></image>
+<!-- 上传成功 -->
+<!-- <view class='uptopmask'></view>
+<view class='uptop_01'>
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score1'>成功上传视频，获得 <text class='yellownum'>50</text> 积分</text>
+  <text class='up_view02' style='margin-top:60rpx'>好的</text>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+</view>
+<image class='uptopclose' src = "../../images/closebtn.png"></image>   -->
+
+<!-- 上传后升级 -->
+<!-- <view class='uptopmask'></view>
+<view class='uptop_01'>
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score'>成功上传视频，获得 <text class='yellownum'>50</text> 积分</text>
+  <text class='up_text02'>恭喜您成功升到　　　级</text>
+  <text class='up_view02'>点击查看详情</text>
+  <image class='uptopcup' src = "../../images/uptopcup.png"></image>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+  <text class='up_num01'>2</text>
+</view>
+<image class='uptopclose' src = "../../images/closebtn.png"></image>   -->
+
+<!-- 上传后升级并获得称号 -->
+<!-- <view class='uptopmask'></view>
+<view class='uptop_03'>
+  <image class='uptopimg' src = "../../images/uptopimg.png"></image>
+  <text class='up_score'>成功上传视频，获得 <text class='yellownum'>15</text> 积分</text>
+  <text class='up_text02'>恭喜您成功升到　　　级</text>
+  <text class='up_sign02'>解锁　　　　　　　称号</text>
+  <text class='up_view02'>点击查看详情</text>
+  <image class='uptopcup' src = "../../images/uptopcup.png"></image>
+  <image class='upsign01' src = "../../images/upsign.png"></image>
+  <image class='sragletop' src='../../images/sragletop.png'></image>
+  <text class='up_num01'>2</text>
+</view>
+<image class='uptopclose1' src = "../../images/closebtn.png"></image>  -->
